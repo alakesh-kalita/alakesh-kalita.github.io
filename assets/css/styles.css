@@ -156,7 +156,6 @@ a.btn-cta-secondary:hover {
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   margin-right: 30px;
-  overflow-y: auto; 
   max-height: 450px; 
 }
 .section .section-inner{
@@ -319,12 +318,6 @@ a.btn-cta-secondary:hover {
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px; /* Add margin bottom for gap */
-        }
-        .index-heading {
-            font-size: 24px;
-            font-weight: bold;
-            color: #5c4033; /* Change font color to dark brown */
-            margin-bottom: 20px;
         }
         .index-list {
             list-style-type: disc;
