@@ -311,3 +311,24 @@ a.btn-cta-secondary:hover {
 .news-item p strong {
     text-decoration: underline; /* Underline dates */
 }
+
+        .index-container {
+            font-family: Georgia, serif; /* Set font to Georgia (serif) */
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Add margin bottom for gap */
+        }
+        .index-heading {
+            font-size: 24px;
+            font-weight: bold;
+            color: #5c4033; /* Change font color to dark brown */
+            margin-bottom: 20px;
+        }
+        .index-list {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 18px;
+            color: #555;
+        }
