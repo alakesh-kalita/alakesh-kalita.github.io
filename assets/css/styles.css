@@ -150,7 +150,7 @@ a.btn-cta-secondary:hover {
 .section {
   margin-bottom: 40px; /* Increased margin */
 }
-.section .section-inner {
+.section .section-inner#index {
   background: #fff;
   padding: 30px;
   border-radius: 10px; /* Rounded corners */
@@ -158,6 +158,13 @@ a.btn-cta-secondary:hover {
   margin-right: 30px;
   overflow-y: auto; /* Add vertical scrollbar if needed */
   max-height: 450px; /* Set maximum height for the container */
+}
+.section .section-inner{
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-right: 30px;
 }
 .section .heading {
   margin-top: 0;
