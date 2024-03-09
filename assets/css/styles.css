@@ -126,7 +126,7 @@ a.btn-cta-secondary:hover {
   color: #800080;
 }
 .header .profile-content .desc {
-  color: #007bff;
+  color: #800080; /* #007bff;*/
   font-size: 18px;
   margin-top: 12px; /* Increased margin */
   font-family: 'Roboto', sans-serif;
@@ -156,6 +156,8 @@ a.btn-cta-secondary:hover {
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   margin-right: 30px;
+  overflow-y: auto; /* Add vertical scrollbar if needed */
+  max-height: 450px; /* Set maximum height for the container */
 }
 .section .heading {
   margin-top: 0;
@@ -262,11 +264,12 @@ a.btn-cta-secondary:hover {
 /* latest news */
 .container_news {
     max-width: 800px;
-    margin: 2px auto;
+    /*margin: 2px auto;*/
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     overflow-y: auto; /* Add vertical scrollbar if needed */
     max-height: 450px; /* Set maximum height for the container */
 }
