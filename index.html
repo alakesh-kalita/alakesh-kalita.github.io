@@ -170,7 +170,29 @@
 	            </div>
 	            <div class="col-md-6">
 			   <!-- <h4><b><font color="maroon">IPv6 connected IoT Network</font></b></h4> -->
-			    <img src="my_gif.gif" alt="IoT Network" width="420" height="200">
+			    <img src="my_gif.gif" alt="IoT Network" width="420" height="200" class="default-size">
+			     <style>
+				        /* Media query for mobile phones */
+				        @media only screen and (max-width: 767px) {
+				            .default-size {
+				                width: 250px; /* Adjust this value as needed */
+				            }
+				        }
+				
+				        /* Media query for tablets */
+				        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+				            .default-size {
+				                width: 350px; /* Adjust this value as needed */
+				            }
+				        }
+				
+				        /* Media query for laptops */
+				        @media only screen and (min-width: 1024px) {
+				            .default-size {
+				                width: 420px; /* Adjust this value as needed */
+				            }
+				        }
+			    </style>
 	            </div>
 		</div>
 	</div>	
