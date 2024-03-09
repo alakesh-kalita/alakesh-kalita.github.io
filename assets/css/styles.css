@@ -7,10 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #f5f5f5; /* Light gray background */
 }
- body.night-mode {
-            background-color: #333333; /* Dark background color (night mode) */
-            color: #ffffff; /* Light text color (night mode) */
- }
 /* Links and Buttons */
 a {
   color: #1958EE;
