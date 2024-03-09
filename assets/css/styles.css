@@ -156,8 +156,10 @@ a.btn-cta-secondary:hover {
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   margin-right: 30px;
-  overflow-y: auto; /* Add vertical scrollbar if needed */
-  max-height: 450px; /* Set maximum height for the container */
+  /*
+  overflow-y: auto; 
+  max-height: 450px; 
+  */
 }
 .section .section-inner{
   background: #fff;
