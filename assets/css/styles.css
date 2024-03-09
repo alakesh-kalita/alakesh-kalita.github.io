@@ -150,16 +150,14 @@ a.btn-cta-secondary:hover {
 .section {
   margin-bottom: 40px; /* Increased margin */
 }
-.section-inner#index {
+.section .section-inner-index {
   background: #fff;
   padding: 30px;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   margin-right: 30px;
-  /*
   overflow-y: auto; 
   max-height: 450px; 
-  */
 }
 .section .section-inner{
   background: #fff;
