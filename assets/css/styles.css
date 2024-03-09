@@ -150,7 +150,7 @@ a.btn-cta-secondary:hover {
 .section {
   margin-bottom: 40px; /* Increased margin */
 }
-.section .section-inner#index {
+.section-inner#index {
   background: #fff;
   padding: 30px;
   border-radius: 10px; /* Rounded corners */
