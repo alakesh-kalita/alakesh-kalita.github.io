@@ -320,7 +320,6 @@ a.btn-cta-secondary:hover {
             margin-bottom: 20px; /* Add margin bottom for gap */
         }
         .index-list {
-            list-style-type: disc;
             font-size: 14px; /* Smaller text size */
             color: #333;
             margin-left: 20px;
