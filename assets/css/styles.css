@@ -125,7 +125,7 @@ a.btn-cta-secondary:hover {
   color: #800080;
 }
 .header .profile-content .desc {
-  color: #800080; /* #007bff;*/
+  color: #800000; /* #007bff;*/
   font-size: 18px;
   margin-top: 12px; /* Increased margin */
   font-family: 'Roboto', sans-serif;
@@ -174,7 +174,7 @@ a.btn-cta-secondary:hover {
 /* About Section */
 /* Latest Section */
 .latest .item {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
