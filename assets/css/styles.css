@@ -252,6 +252,8 @@ a.btn-cta-secondary:hover {
 .section-inner#pub {
     background-color: #f9f9f9; /* Change to your desired color */
     background-size: cover; /* Adjust as needed */
+    font-size: 15px; /* Smaller text size */
+    
 }
 .section-inner#pub b {
         color: #800080; /* Change this to the desired color */
