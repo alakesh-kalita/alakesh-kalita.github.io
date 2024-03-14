@@ -35,6 +35,23 @@
 		      $("#includedMyInfo").load("headerr.html"); 
 		    });
     </script> 
+    <style>
+        .gradient-line {
+            height: 3px;
+            background: linear-gradient(to right, #ff5733 0%, #3333ff 50%, #ff5733 100%);
+            background-size: 200% 100%;
+            animation: gradientAnimation 3s infinite linear;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+    </style>	
 
 
 
@@ -136,7 +153,7 @@
 		    </ul>
 	   </div>     
 </div><!--//secondary-->  
-<hr>		
+<div class="gradient-line"></div>		
 </div><!--//row-->	    
 </div><!--//masonry-->  		
 
