@@ -25,6 +25,25 @@
     <![endif]-->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <!-- Script for gradient line -->
+   <style>
+        .gradient-line {
+            height: 3px;
+            background: linear-gradient(to right, blue 0%, red 100%);
+            background-size: 200% 100%;
+            background-position: 0 bottom;
+            animation: gradient 2s linear infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0 bottom;
+            }
+            100% {
+                background-position: 100% bottom;
+            }
+        }
+    </style>	
 </head>
 <body>
 <div class="container">
@@ -176,6 +195,6 @@
 
   intervalId = setInterval(startTyping, 100); // Start typing
 </script>
-
+<div class="gradient-line"></div>
 </body>
 </html>
