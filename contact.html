@@ -28,6 +28,53 @@
             $("#includedMyInfo").load("headerr.html");
         });
     </script>
+    <style>
+        .message-box {
+            width: 500px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        .message-box h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .message-box input[type="text"],
+        .message-box textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .message-box textarea {
+            height: 100px;
+        }
+
+        .message-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .message-box input[type="submit"]:hover {
+            background-color: #338BA8;
+        }
+    </style>	
 </head>
 <body>
     <header class="header">
@@ -115,7 +162,7 @@
 				           </p>	
 			            </div>
 			            <div class="col-md-6">
-					   &nbsp;&nbsp;&nbsp; <img src="assets/images/IITG_logo.png" alt="IITG" width="130" height="130" class="default-size">
+					   &nbsp;&nbsp;&nbsp; <img src="assets/images/IITG_logo.png" alt="IITG" width="130" height="130" class="default-size">  
 			            </div>
 				</div>
 			</div>	
@@ -126,12 +173,23 @@
 	<div class="col-md-12">
 			<div class="index-container">
 		        	<div class="row">
-				   <div class="col-md-6">
+				   <div class="col-md-4">
 			                   <a href="https://scholar.google.com/citations?user=hVUJBdvOhCIC&hl=en"><img src="assets/images/google-scholar.svg" width="46" height="46"> </a> &nbsp;
 				            <a href="https://www.linkedin.com/in/alakesh-kalita-ph-d-39447055/"><img src="assets/images/linkedin.png" width="45" height="45"> &nbsp; </a>
 				            <a href="https://www.researchgate.net/profile/Alakesh_Kalita3"> <img src="assets/images/RG.png" width="45" height="45"> &nbsp; </a>
 					    <a href="https://twitter.com/Alakesh1025"> <img src="assets/images/twitter.png" width="44" height="44"> &nbsp; </a>	 
 			            </div>
+				     <div class="col-md-8">
+					 <div class="message-box">
+					        <h2><b><font color="maroon">Research Interest</font></b></h2>
+					        <form action="#" method="post">
+					            <input type="text" name="name" placeholder="Your Name" required>
+					            <input type="text" name="email" placeholder="Your Email" required>
+					            <textarea name="message" placeholder="Your Message" required></textarea>
+					            <input type="submit" value="Send Message">
+					        </form>
+					</div>
+			            </div>	
 				</div>
 			</div>	
 		       <hr>
