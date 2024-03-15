@@ -346,7 +346,22 @@
     <!-- ******FOOTER****** --> 
     <footer class="footer">
 	 <div id="includedMyFooter"></div>
+	 <small class="visitor-counter" id="visitor-counter"></small>   
     </footer>
+
+	<script> <!-- For Visitor Counter -->
+	    // Load visitor count from localStorage or initialize it to 0
+	    let visitorCount = localStorage.getItem('visitorCount') || 0;
+	
+	    // Increment the visitor count
+	    visitorCount++;
+	
+	    // Update the visitor count in localStorage
+	    localStorage.setItem('visitorCount', visitorCount);
+	
+	    // Display the visitor count
+	    document.getElementById('visitor-counter').textContent = 'Total Visitors: ' + visitorCount;
+	</script>	
  
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
