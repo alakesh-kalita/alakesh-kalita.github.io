@@ -343,3 +343,21 @@ a.btn-cta-secondary:hover {
             color: #333;
             margin-left: 20px;
  }
+
+/* The dimensions of the scrollbar track */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ba34eb #4e43e3; /* thumb color track color */
+}
+
+/* Handle */
+/* The dimensions of the scrollbar handle */
+*::-moz-scrollbar-thumb {
+  background-color: #ba34eb; /* thumb color */
+  border-radius: 5px; /* make it round */
+}
+
+/* The color of the scrollbar track */
+*::-moz-scrollbar-track {
+  background-color: #f5f5f5; /* track color */
+}
