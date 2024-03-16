@@ -344,6 +344,24 @@ a.btn-cta-secondary:hover {
             margin-left: 20px;
  }
 
+
+.gradient-line {
+            height: 3px;
+            background: linear-gradient(to right, #ff5733 0%, #3333ff 50%, #ff5733 100%);
+            background-size: 200% 100%;
+            animation: gradientAnimation 3s infinite linear;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+
 /* The dimensions of the scrollbar track */
 * {
   scrollbar-width: thin;
