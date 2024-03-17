@@ -87,6 +87,19 @@
 	    .hidden {
 	      display: none;
 	    }
+
+	 /* Styles for the elements */
+	    .fade-in {
+	      opacity: 0; /* Initially hidden */
+	      transition: opacity 0.5s ease-in-out; /* Fade-in transition */
+	    }
+	
+	    /* Scroll effect styles */
+	    .scroll-fade-in {
+	      opacity: 1;
+	    }
+
+	    
 	  </style>    
   	
 
@@ -410,6 +423,32 @@
 
       requestAnimationFrame(updateProgressBar);
     });
+
+		// Function to check if an element is in the viewport
+		    const isInViewport = (elem) => {
+		      const rect = elem.getBoundingClientRect();
+		      return (
+		        rect.top >= 0 &&
+		        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+		      );
+		    };
+		
+		    // Function to handle scrolling effects
+		    const handleScroll = () => {
+		      const elements = document.querySelectorAll('.fade-in');
+		
+		      elements.forEach((element) => {
+		        if (isInViewport(element)) {
+		          element.classList.add('scroll-fade-in'); // Add scroll effect class
+		        } else {
+		          element.classList.remove('scroll-fade-in'); // Remove scroll effect class
+		        }
+		      });
+		    };
+		
+		    // Event listener for scroll events
+		    window.addEventListener('scroll', handleScroll);
+	   
   </script>	
  
     <!-- Javascript -->          
