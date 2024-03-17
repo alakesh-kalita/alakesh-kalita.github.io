@@ -54,13 +54,14 @@
             }
         }
 
-	/*
+	
 	    .loader-container {
 	      display: flex;
 	      flex-direction: column;
 	      align-items: center;
 	      justify-content: center;
 	      height: 100vh;
+	      background: linear-gradient(135deg, #4A00E0, #8E2DE2, #FFC837);    
 	    }
 	    .loading-bar {
 	      width: 200px;
@@ -87,7 +88,7 @@
 	    .hidden {
 	      display: none;
 	    }
-	*/
+	/*
 	.my_anim {
             height: 100vh;
             display: flex;
@@ -96,13 +97,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: linear-gradient(135deg, #4A00E0, #8E2DE2, #FFC837); /* Updated gradient background */
+            background: linear-gradient(135deg, #4A00E0, #8E2DE2, #FFC837); 
         }
 
         .wave {
             width: 4px;
             height: 80px;
-            background: linear-gradient(45deg, #FFD700, #00CED1); /* Updated gradient color */
+            background: linear-gradient(45deg, #FFD700, #00CED1); 
             margin: 10px;
             animation: wave 1s linear infinite;
             border-radius: 20px;
@@ -154,7 +155,7 @@
            pointer-events: none;
         }    
 
-	
+	*/
 	.reveal{
             position: relative;
             transform: translateY(150px);
@@ -176,7 +177,7 @@
 
 <body>
    <!-- ****** loading bar ****** -->
-
+<!--	
    <div class="my_anim">
         <div class="wave"></div>
         <div class="wave"></div>
@@ -189,12 +190,12 @@
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
-   <!--	
+-->   
    <div class="loader-container">
 	    <div class="loading-bar">
 	      <div class="progress"></div>
 	    </div>
-   </div>  -->
+   </div>  
   
     <!-- ******HEADER****** --> 
     <header class="header">
@@ -485,7 +486,7 @@
 
 	
    <script>
-  /*	   
+ 	   
     document.addEventListener("DOMContentLoaded", function() {
       // Simulate content loading delay
       setTimeout(function() {
@@ -508,7 +509,7 @@
 
       requestAnimationFrame(updateProgressBar);
     });
-*/
+ /*
 document.addEventListener("DOMContentLoaded", function() {
             // Simulate content loading delay
             setTimeout(function() {
@@ -516,7 +517,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.querySelector('.my_anim').classList.add('hidden');
             }, 3000); // Adjust delay time as needed
         });	 
-
+*/
   function reveal() {
             var reveals = document.querySelectorAll(".reveal");
 
