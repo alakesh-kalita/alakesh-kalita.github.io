@@ -53,7 +53,42 @@
                 background-position: 100% 0;
             }
         }
-    </style>	
+
+
+	    .loader-container {
+	      display: flex;
+	      flex-direction: column;
+	      align-items: center;
+	      justify-content: center;
+	      height: 100vh;
+	    }
+	    .loading-bar {
+	      width: 200px;
+	      height: 10px;
+	      background-color: #f3f3f3;
+	      border-radius: 10px;
+	      margin-top: 20px;
+	    }
+	
+	    .progress {
+	      width: 0;
+	      height: 100%;
+	      background-color: #3498db;
+	      border-radius: 10px;
+	      transition: width 0.5s ease-in-out;
+	    }
+	
+	    @keyframes spin {
+	      0% { transform: rotate(0deg); }
+	      100% { transform: rotate(360deg); }
+	    }
+	
+	    /* Hide content initially */
+	    .hidden {
+	      display: none;
+	    }
+	  </style>    
+  	
 
 
 
@@ -64,7 +99,12 @@
     <header class="header">
 	 <div id="includedMyInfo"></div>
     </header><!--//header-->
-    
+
+   <div class="loader-container">
+    <div class="loading-bar">
+      <div class="progress"></div>
+    </div>
+   </div>	
     <div class="container sections-wrapper">
         <div class="row">
            <div class="primary col-md-8 col-sm-12 col-xs-12">  
@@ -344,6 +384,30 @@
 	 <div id="includedMyFooter"></div>  
     </footer>
 
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Simulate content loading delay
+      setTimeout(function() {
+        // Show content and hide loader after delay
+        document.querySelector('.content').classList.remove('hidden');
+        document.querySelector('.loader-container').classList.add('hidden');
+      }, 2000); // Adjust delay time as needed
+
+      // Update progress bar
+      let progress = 0;
+      const progressBar = document.querySelector('.progress');
+
+      const updateProgressBar = () => {
+        progress += 1;
+        progressBar.style.width = `${progress}%`;
+        if (progress < 100) {
+          requestAnimationFrame(updateProgressBar);
+        }
+      };
+
+      requestAnimationFrame(updateProgressBar);
+    });
+  </script>	
  
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
