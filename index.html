@@ -148,13 +148,13 @@
             }
         }
 
-        .hidden_wave{	
+        .hidden{	
            opacity: 0;
            transition: opacity 3s ease-in-out;
            pointer-events: none;
         }    
 
-	.container sections-wrapper {
+	.container{
 		    display: none;
 		    position: fixed;
 		    top: 0;
@@ -515,8 +515,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Simulate content loading delay
             setTimeout(function() {
                 // Show content and hide loader after delay
-                document.querySelector('.container sections-wrapper').style.cssText = 'display: block; position: fixed; top: 0;';
-                document.querySelector('.my_anim').classList.add('hidden_wave');
+                document.querySelector('.container').classList.remove('hidden');
+                document.querySelector('.my_anim').classList.add('hidden');
             }, 3000); // Adjust delay time as needed
         });	 
 
