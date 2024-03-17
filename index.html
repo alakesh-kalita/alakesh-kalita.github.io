@@ -516,8 +516,8 @@ window.onload = function() {
     elements.forEach(function(element) {
       // Perform actions on elements except those with class .my_anim
       // For example:
-       element.style.color = 'red';
-       element.classList.add('hidden');
+      // element.style.color = 'red';
+       element.classList.remove('hidden');
     });
   };
 	   
@@ -527,7 +527,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Show content and hide loader after delay
 		var elements = document.querySelectorAll('*:not(.my_anim)');
 		    elements.forEach(function(element) {
-		       element.classList.remove('hidden');
+		       element.classList.add('hidden');
 		    });
                 document.querySelector('.my_anim').classList.add('hidden');
             }, 3000); // Adjust delay time as needed
