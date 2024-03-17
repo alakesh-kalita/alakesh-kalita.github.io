@@ -154,7 +154,7 @@
            pointer-events: none;
         }    
 
-	.container {
+	.container sections-wrapper {
 		    display: none;
 		    position: fixed;
 		    top: 0;
@@ -515,7 +515,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Simulate content loading delay
             setTimeout(function() {
                 // Show content and hide loader after delay
-                document.querySelector('.container').style.cssText = 'display: block; position: fixed; top: 0;';
+                document.querySelector('.container sections-wrapper').style.cssText = 'display: block; position: fixed; top: 0;';
                 document.querySelector('.my_anim').classList.add('hidden_wave');
             }, 3000); // Adjust delay time as needed
         });	 
