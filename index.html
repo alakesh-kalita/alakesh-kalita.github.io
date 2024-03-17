@@ -148,11 +148,17 @@
             }
         }
 
-        .hidden{	
+        .hidden_wave{	
            opacity: 0;
            transition: opacity 3s ease-in-out;
            pointer-events: none;
         }    
+
+	.container {
+		    display: none;
+		    position: fixed;
+		    top: 0;
+		}    
 
 	.reveal{
             position: relative;
@@ -509,8 +515,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Simulate content loading delay
             setTimeout(function() {
                 // Show content and hide loader after delay
-                document.querySelector('.container').classList.remove('hidden');
-                document.querySelector('.my_anim').classList.add('hidden');
+                document.querySelector('.container').style.display = 'block';
+                document.querySelector('.my_anim').classList.add('hidden_wave');
             }, 3000); // Adjust delay time as needed
         });	 
 
