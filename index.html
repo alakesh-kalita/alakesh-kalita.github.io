@@ -195,7 +195,7 @@
 	      <div class="progress"></div>
 	    </div>
    </div>  -->
-   <div class="this_is_for_animation" style="display: none;">	
+  
     <!-- ******HEADER****** --> 
     <header class="header">
 	 <div id="includedMyInfo"></div>
@@ -482,10 +482,6 @@
     </footer>
    
    
-   
-   
-   </div> <!-- this_is_for_animation -->	
-
 
 	
    <script>
@@ -517,7 +513,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Simulate content loading delay
             setTimeout(function() {
                 // Show content and hide loader after delay
-		document.querySelector('.this_is_for_animation').style.cssText = 'display: block; position: fixed; top: 0;';    
+		document.querySelectorAll(':not(.my_anim)').forEach(function(element) { element.style.cssText = 'display: block; position: fixed; top: 0;';});  
                 document.querySelector('.my_anim').classList.add('hidden');
             }, 3000); // Adjust delay time as needed
         });	 
