@@ -507,6 +507,7 @@
 */
 document.addEventListener("DOMContentLoaded", function() {
             // Simulate content loading delay
+	    document.querySelector('.container').classList.add('hidden');
             setTimeout(function() {
                 // Show content and hide loader after delay
                 document.querySelector('.container').classList.remove('hidden');
