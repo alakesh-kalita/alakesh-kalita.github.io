@@ -513,7 +513,6 @@ document.addEventListener("DOMContentLoaded", function() {
             // Simulate content loading delay
             setTimeout(function() {
                 // Show content and hide loader after delay
-		document.querySelectorAll(':not(.my_anim)').forEach(function(element) { element.style.cssText = 'display: block; position: fixed; top: 0;';});  
                 document.querySelector('.my_anim').classList.add('hidden');
             }, 3000); // Adjust delay time as needed
         });	 
