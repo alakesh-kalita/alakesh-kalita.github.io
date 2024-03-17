@@ -54,7 +54,7 @@
             }
         }
 
-
+	/*
 	    .loader-container {
 	      display: flex;
 	      flex-direction: column;
@@ -83,10 +83,75 @@
 	      100% { transform: rotate(360deg); }
 	    }
 	
-	    /* Hide content initially */
+	    
 	    .hidden {
 	      display: none;
 	    }
+	*/
+	.loading {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #4A00E0, #8E2DE2, #FFC837); /* Updated gradient background */
+        }
+
+        .wave {
+            width: 4px;
+            height: 80px;
+            background: linear-gradient(45deg, #FFD700, #00CED1); /* Updated gradient color */
+            margin: 10px;
+            animation: wave 1s linear infinite;
+            border-radius: 20px;
+        }
+
+        .wave:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        .wave:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        .wave:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        .wave:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+        .wave:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+        .wave:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+        .wave:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+        .wave:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+        .wave:nth-child(10) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }    
+	    
 	  </style>    
   	
 
@@ -96,11 +161,25 @@
 
 <body>
    <!-- ****** loading bar ****** -->
+
+   <div class="kela">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+   <!--	
    <div class="loader-container">
 	    <div class="loading-bar">
 	      <div class="progress"></div>
 	    </div>
-   </div>
+   </div>  -->
 	
     <!-- ******HEADER****** --> 
     <header class="header">
@@ -388,6 +467,7 @@
     </footer>
 
    <script>
+  /*	   
     document.addEventListener("DOMContentLoaded", function() {
       // Simulate content loading delay
       setTimeout(function() {
@@ -410,7 +490,15 @@
 
       requestAnimationFrame(updateProgressBar);
     });
-	   
+*/
+document.addEventListener("DOMContentLoaded", function() {
+            // Simulate content loading delay
+            setTimeout(function() {
+                // Show content and hide loader after delay
+                document.querySelector('.container').classList.remove('hidden');
+                document.querySelector('.loading').classList.add('hidden');
+            }, 3000); // Adjust delay time as needed
+        });	   
   </script>	
  
     <!-- Javascript -->          
