@@ -155,7 +155,7 @@
            pointer-events: none;
         }    
 
-	.container sections-wrapper{
+	.sections-wrapper{
 		display: none;
 	}	
 	.reveal{
@@ -517,7 +517,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Simulate content loading delay
             setTimeout(function() {
                 // Show content and hide loader after delay
-		var elements = document.querySelectorAll('.container.sections-wrapper');
+		var elements = document.querySelectorAll('sections-wrapper');
 		    elements.forEach(function(element) {
 		      element.style.display = 'block'; // Change 'block' to your desired display property
 		    });
@@ -531,7 +531,7 @@ document.addEventListener("DOMContentLoaded", function() {
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 50;
+                var elementVisible = 30;
 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
