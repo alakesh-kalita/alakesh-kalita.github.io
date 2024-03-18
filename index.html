@@ -150,10 +150,7 @@
            transition: opacity 3s ease-in-out;
            pointer-events: none;
         }    
-
-       .hello_world
-	display: none;
-       }      
+     
 	    
 	.reveal{
             position: relative;
@@ -198,7 +195,7 @@
    </div>  
   -->  
 	
-<div class="hello_world">	
+<div class="hello_world" style="display: none;">	
     <!-- ******HEADER****** --> 
     <header class="header">
 	 <div id="includedMyInfo"></div>
@@ -517,7 +514,11 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
                 // Show content and hide loader after delay
                 document.querySelector('.my_anim').classList.add('hidden_var');
-		document.querySelector('.hello_world').style.display = 'block';    
+		var element = document.querySelector('.hello_world');
+		    // Set display to block
+		    element.style.display = 'block';
+		    // Set the top property to position the element at the top of the page
+		    element.style.top = '0';    
             }, 3000); // Adjust delay time as needed
         });	 
 
