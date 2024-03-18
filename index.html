@@ -85,7 +85,7 @@
 	    }
 	
 	    
-	    .hidden {
+	    .hidden_var {
 	      display: none;
 	    }
 	
@@ -155,9 +155,10 @@
            pointer-events: none;
         }    
 
-	.sections-wrapper{
-		display: none;
-	}	
+       .my_anim_second{
+	display: none;
+       }      
+	    
 	.reveal{
             position: relative;
             transform: translateY(150px);
@@ -200,6 +201,8 @@
 	    </div>
    </div>  
   -->  
+	
+<div class="hello_world">	
     <!-- ******HEADER****** --> 
     <header class="header">
 	 <div id="includedMyInfo"></div>
@@ -517,11 +520,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Simulate content loading delay
             setTimeout(function() {
                 // Show content and hide loader after delay
-		var elements = document.querySelectorAll('sections-wrapper');
-		    elements.forEach(function(element) {
-		      element.style.display = 'block'; // Change 'block' to your desired display property
-		    });
-                document.querySelector('.my_anim').classList.add('hidden');
+                document.querySelector('.my_anim').classList.add('hidden_var');
+		document.querySelector('.hello_world').style.display = 'block';    
             }, 3000); // Adjust delay time as needed
         });	 
 
@@ -554,7 +554,8 @@ document.addEventListener("DOMContentLoaded", function() {
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     <script type="text/javascript" src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
     <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>            
+    <script type="text/javascript" src="assets/js/main.js"></script>   
+</div>	
 </body>
 </html> 
 
