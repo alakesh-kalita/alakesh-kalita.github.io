@@ -85,6 +85,7 @@
 	    }
 	
 	.hello_world {	
+	     display: none; /* Initially hidden */
 	     opacity: 0; /* Initially hidden */
      	     transition: opacity 1s ease-in-out; /* Smooth transition for opacity */	
 	}    
@@ -519,12 +520,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Show content and hide loader after delay
                 document.querySelector('.my_anim').classList.add('hidden_var');
 		var element = document.querySelector('.hello_world');
-		element.style.opacity = '1';    
-
-		/*      
+		element.style.opacity = '1';        
 		element.style.display = 'block';
 		element.style.top = '0';     
-		  
+		/*   
 		var element = document.querySelector('.hello_world');
 		    // Set display to block
 		    element.style.display = 'block';
