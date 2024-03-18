@@ -155,7 +155,9 @@
            pointer-events: none;
         }    
 
-	
+	.container sections-wrapper{
+		display: none;
+	}	
 	.reveal{
             position: relative;
             transform: translateY(150px);
@@ -167,6 +169,7 @@
             transform: translateY(0);
             opacity: 1;
         }    
+
 	    
 	  </style>    
   	
@@ -514,9 +517,9 @@ document.addEventListener("DOMContentLoaded", function() {
             // Simulate content loading delay
             setTimeout(function() {
                 // Show content and hide loader after delay
-		var elements = document.querySelectorAll('*:not(.my_anim)');
+		var elements = document.querySelectorAll('.container.sections-wrapper');
 		    elements.forEach(function(element) {
-		       element.classList.remove('hidden');
+		      element.style.display = 'block'; // Change 'block' to your desired display property
 		    });
                 document.querySelector('.my_anim').classList.add('hidden');
             }, 3000); // Adjust delay time as needed
@@ -528,7 +531,7 @@ document.addEventListener("DOMContentLoaded", function() {
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
+                var elementVisible = 50;
 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
