@@ -66,6 +66,18 @@
 	    text-decoration: none; /* Remove underline from hyperlink */
 	    color: white; /* Set text color */
 	}    
+
+	.reveal{
+            position: relative;
+            transform: translateY(150px);
+            opacity: 0;
+            transition: 1s all ease;
+        }
+
+        .reveal.active{
+            transform: translateY(0);
+            opacity: 1;
+        }        
    </style>	
     
 </head> 
@@ -114,7 +126,7 @@
 			</div>
 			</div>	
 
-			<div class="content">    
+			<div class="content reveal">    
                         <hr class="divider" />
                         <div class="item row">
 				    
@@ -151,7 +163,7 @@
 			</div>
 			</div>	
 
-			<div class="content">    
+			<div class="content" reveal>    
                         <hr class="divider" />
                         <div class="item row">	
 
@@ -174,7 +186,7 @@
 			</div>
 			</div>	
 
-			<div class="content">    
+			<div class="content" reveal>    
                         <hr class="divider" />
                         <div class="item row">		
 
@@ -216,7 +228,27 @@
     <footer class="footer">
 	 <div id="includedMyFooter"></div>
     </footer>
- 
+
+  <script>	
+	 function reveal() {
+	            var reveals = document.querySelectorAll(".reveal");
+	
+	            for (var i = 0; i < reveals.length; i++) {
+	                var windowHeight = window.innerHeight;
+	                var elementTop = reveals[i].getBoundingClientRect().top;
+	                var elementVisible = 30;
+	
+	                if (elementTop < windowHeight - elementVisible) {
+	                    reveals[i].classList.add("active");
+	                } else {
+	                    reveals[i].classList.remove("active");
+	                }
+	            }
+	        }
+	
+	        window.addEventListener("scroll", reveal);
+	   
+  </script>	
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
