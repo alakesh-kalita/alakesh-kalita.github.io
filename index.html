@@ -173,38 +173,6 @@
             transform: translateY(0);
             opacity: 1;
         }    
-
-
-	/* Styling for the popup container */
-		.popup-container {
-			    position: fixed;
-			    bottom: 40px;
-			    right: 7px;
-			    background-color: #f0f0f0; /* Light professional color */
-			    color: #333; /* Dark text color */
-			    border-radius: 10px;
-			    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			    border: 1px solid blue;
-			    padding: 10px;
-			    z-index: 9999;
-			    display: none; /* Initially hidden */
-			    align-items: center; /* Center items vertically */
-			}
-		
-		/* Styling for the cat icon */
-		.cat-icon {
-		    margin-right: 20px;
-		}
-		
-		/* Styling for the popup icons */
-		.popup-icons {
-		    display: flex;
-		    flex-direction: column;
-		}
-		
-		.popup-icon {
-		    margin-bottom: 10px;
-}    
 	  </style>    
   	
 
@@ -594,46 +562,10 @@ document.addEventListener("DOMContentLoaded", function() {
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>   
 </div>	
-<!-- Popup container -->
-<div class="popup-container" id="popup-container">
-    
-    <div class="popup-column">
-        <!-- Cat icon -->
-        <img src="assets/images/teamwork.gif" alt="Cat" class="cat-icon" width="50" height="50">
-        <div class="popup-text">Connect</div>
-        <div class="popup-text">&nbsp;&nbsp;Me !!!</div>
-    </div>
-    <!-- Right column (social network icons) -->
-    <div class="popup-column">
-        <!-- Social network icons -->
-        <div class="popup-icons">
-	    <a href="https://scholar.google.com/citations?user=hVUJBdvOhCIC&hl=en" class="popup-icon"><img src="assets/images/google-scholar.svg" width="30" height="30"> </a>
-	    <a href="https://www.linkedin.com/in/alakesh-kalita-ph-d-39447055/" class="popup-icon"><img src="assets/images/linkedin.png" width="30" height="30"> </a>
-	    <a href="https://www.researchgate.net/profile/Alakesh_Kalita3" class="popup-icon"> <img src="assets/images/RG.png" width="30" height="30"> </a>
-	    <a href="https://twitter.com/Alakesh1025" class="popup-icon"> <img src="assets/images/twitter.png" width="31" height="31"> </a>	 
-	     <a href="https://www.facebook.com/profile.php?id=100077436171241" class="popup-icon"> <img src="assets/images/facebook.png" width="31" height="31"> </a>
-        </div>
-    </div>
-    <!-- Popup sound -->
-    <audio class="popup-sound" id="popup-sound" src="pop_up.mp3" preload="auto"></audio>
-	
-</div>
 
-<script>
-window.addEventListener('scroll', function() {
-    var popupContainer = document.getElementById('popup-container');
-    var popupSound = document.getElementById('popup-sound');
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        // Show the popup container
-        popupContainer.style.display = 'flex';
-        // Play the popup sound
-        popupSound.play();
-    } else {
-        // Hide the popup container
-        popupContainer.style.display = 'none';
-    }
-});
-</script>	
+    <footer class="footer">
+	 <div id="includedMyPopUP"></div>
+    </footer>	
 </body>
 </html> 
 
