@@ -181,6 +181,7 @@
 		    z-index: 9999;
 		    display: flex;
 		    align-items: center;
+		    display: none; /* Initially hidden */	
 		}
 		
 		/* Styling for the cat icon */
@@ -606,7 +607,7 @@ window.addEventListener('scroll', function() {
     var popupSound = document.getElementById('popup-sound');
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         // Show the popup container
-        popupContainer.style.display = 'flex';
+        popupContainer.style.display = 'block';
         // Play the popup sound
         popupSound.play();
     } else {
