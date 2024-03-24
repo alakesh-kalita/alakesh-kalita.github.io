@@ -167,7 +167,36 @@
             opacity: 1;
         }    
 
-	    
+
+	/* Styling for the popup container */
+		.popup-container {
+		    position: fixed;
+		    bottom: 20px;
+		    right: 20px;
+		    background-color: #4CAF50;
+		    color: white;
+		    border-radius: 10px;
+		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		    padding: 20px;
+		    z-index: 9999;
+		    display: flex;
+		    align-items: center;
+		}
+		
+		/* Styling for the cat icon */
+		.cat-icon {
+		    margin-right: 20px;
+		}
+		
+		/* Styling for the popup icons */
+		.popup-icons {
+		    display: flex;
+		    flex-direction: column;
+		}
+		
+		.popup-icon {
+		    margin-bottom: 10px;
+}    
 	  </style>    
   	
 
@@ -557,6 +586,35 @@ document.addEventListener("DOMContentLoaded", function() {
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>   
 </div>	
+<!-- Popup container -->
+<div class="popup-container" id="popup-container">
+    <!-- Cat icon -->
+    <img src="assets/images/work_place.png" alt="Cat" class="cat-icon" width="50" height="50">
+    <!-- Social network icons -->
+    <div class="popup-icons">
+        <a href="#" class="popup-icon"><img src="assets/images/facebook.png" alt="Facebook" width="30" height="30"></a>
+        <a href="#" class="popup-icon"><img src="assets/images/twitter.png" alt="Twitter" width="30" height="30"></a>
+        <a href="#" class="popup-icon"><img src="assets/images/linkedin.png" alt="Instagram" width="30" height="30"></a>
+    </div>
+    <!-- Popup sound -->
+    <audio class="popup-sound" id="popup-sound" src="popup_sound.mp3" preload="auto"></audio>
+</div>
+
+<script>
+window.addEventListener('scroll', function() {
+    var popupContainer = document.getElementById('popup-container');
+    var popupSound = document.getElementById('popup-sound');
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        // Show the popup container
+        popupContainer.style.display = 'flex';
+        // Play the popup sound
+        popupSound.play();
+    } else {
+        // Hide the popup container
+        popupContainer.style.display = 'none';
+    }
+});
+</script>	
 </body>
 </html> 
 
