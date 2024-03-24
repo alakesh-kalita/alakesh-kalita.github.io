@@ -170,19 +170,17 @@
 
 	/* Styling for the popup container */
 		.popup-container {
-		    position: fixed;
-		    bottom: 20px;
-		    right: 20px;
-		    background-color: #4CAF50;
-		    color: white;
-		    border-radius: 10px;
-		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-		    padding: 20px;
-		    z-index: 9999;
-		    display: flex;
-		    align-items: center;
-		    display: none; /* Initially hidden */	
-		}
+			    position: fixed;
+			    bottom: 20px;
+			    right: 20px;
+			    background-color: #f0f0f0; /* Light professional color */
+			    color: #333; /* Dark text color */
+			    border-radius: 10px;
+			    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			    padding: 20px;
+			    z-index: 9999;
+			    display: none; /* Initially hidden */
+			}
 		
 		/* Styling for the cat icon */
 		.cat-icon {
@@ -607,7 +605,7 @@ window.addEventListener('scroll', function() {
     var popupSound = document.getElementById('popup-sound');
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         // Show the popup container
-        popupContainer.style.display = 'block';
+        popupContainer.style.display = 'flex';
         // Play the popup sound
         popupSound.play();
     } else {
