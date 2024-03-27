@@ -2,36 +2,22 @@
 <style>
 	/* Styling for the popup container */
 		.popup-container {
+			    display: none;
 			    position: fixed;
-			    bottom: 40px;
-			    right: 7px;
-			    background-color: #f0f0f0;  /*Light professional color */
-			    color: #333; /* Dark text color */
-			    border-radius: 10px;
-			    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			    border: 1px solid blue;
-			    padding: 10px;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+			    background-color: #f9f9f9;
+			    padding: 20px;
+			    border: 1px solid #ccc;
+			    border-radius: 5px;
 			    z-index: 9999;
-			    display: none; /* Initially hidden */
-			    align-items: center; /* Center items vertically */
 			}
-		
-		/* Styling for the cat icon */
-		.cat-icon {
-		   /* margin-right: 20px;*/
-		    right: -10px;	
-		}
-		
-		/* Styling for the popup icons  */
-		.popup-icons {
-		    bottom: 20px; /* Add space between social icons */
-    		    right: 25px;	
-		}
 		
 		.popup-icon {
 		    width: 30px;
 		    height: 30px;
-		    margin-right: 20px;
+		    margin-right: 10px;
 		    margin-bottom: 20px;
 		}  
 		
@@ -42,16 +28,16 @@
         <img src="assets/images/teamwork.gif" alt="Cat" class="cat-icon" width="50" height="50" style="position: relative; left: 2px;">
         <div class="popup-text">Join Me!</div>    
 		<div>    
-			<a href="https://scholar.google.com/citations?user=hVUJBdvOhCIC&hl=en" class="popup-icon"><img src="assets/images/google-scholar.svg" width="30" height="30"> </a>
-			<a href="https://www.researchgate.net/profile/Alakesh_Kalita3" class="popup-icon"> <img src="assets/images/RG.png" width="30" height="30"> </a>
+			<a href="https://scholar.google.com/citations?user=hVUJBdvOhCIC&hl=en" class="popup-icon"><img src="assets/images/google-scholar.svg" > </a>
+			<a href="https://www.researchgate.net/profile/Alakesh_Kalita3" class="popup-icon"> <img src="assets/images/RG.png" > </a>
 		</div> 
 		<div> 	
-			<a href="https://www.linkedin.com/in/alakesh-kalita-ph-d-39447055/" class="popup-icon"><img src="assets/images/linkedin.png" width="30" height="30"> </a> 
-			<a href="https://twitter.com/Alakesh1025" class="popup-icon"> <img src="assets/images/twitter.png" width="30" height="30"> </a>	 
+			<a href="https://www.linkedin.com/in/alakesh-kalita-ph-d-39447055/" class="popup-icon"><img src="assets/images/linkedin.png" > </a> 
+			<a href="https://twitter.com/Alakesh1025" class="popup-icon"> <img src="assets/images/twitter.png" > </a>	 
 		</div> 
 		<div> 	
-			<a href="https://www.facebook.com/profile.php?id=100077436171241" class="popup-icon"> <img src="assets/images/facebook.png" width="30" height="30"> </a>
-			<a href="contact.html#message" class="popup-icon"> <img src="assets/images/mail.png" width="30" height="30"> </a>
+			<a href="https://www.facebook.com/profile.php?id=100077436171241" class="popup-icon"> <img src="assets/images/facebook.png" > </a>
+			<a href="contact.html#message" class="popup-icon"> <img src="assets/images/mail.png" > </a>
 			<!-- Popup sound -->
 		   		 <audio class="popup-sound" id="popup-sound" src="pop_up.mp3" preload="auto"></audio> 
 		</div>	
