@@ -109,7 +109,7 @@
 	    display: none;
 	    border: 2px solid #800000; /* Maroon border */
 	    background-color: #f4f4f4; /* Light gray background */
-	    padding: 20px; /* Increased padding for better spacing */
+	    padding: 1px 10px;
 	    border-radius: 10px; /* Rounded corners */
 	    margin-bottom: 20px; /* Added space below the box */
 	  }    
@@ -154,12 +154,22 @@
 				<h3> <span class="label label-default">Journals</span></h3>
 				<hr>
 				<li> <span class="label label-success">IEEE TII</span> <b> A. Kalita</b>, and M. Gurusamy, “On-the-Fly Autonomous Slot Allocation in 6TiSCH-based Industrial IoT Networks” in <b> IEEE Transactions on Industrial Informatics</b>, 2024.  <a class="PDF_button">Accepted</a> <a href="https://ieeexplore.ieee.org/document/10504655"class="PDF_button">PDF</a> 
-<a onclick="toggleInfo('J1')" class="PDF_button">BibTex</a>
-					
-<div id="J1" class="info">
-  <p>This is the information for button 1 that will appear and disappear when you click button 1.</p>
-  <p>This can be any kind of content you want.</p>
-</div>
+		<a onclick="toggleInfo('J1')" class="PDF_button">BibTex</a>	<a onclick="toggleInfo('J1_abstract')" class="PDF_button">BibTex</a>				
+		<div id="J1" class="info">
+			  <p>@ARTICLE{10504655,
+			  author={Kalita, Alakesh and Gurusamy, Mohan},
+			  journal={IEEE Transactions on Industrial Informatics}, 
+			  title={On-the-Fly Autonomous Slot Allocation in 6TiSCH-Based Industrial IoT Networks}, 
+			  year={2024},
+			  volume={},
+			  number={},
+			  pages={1-10},
+			  doi={10.1109/TII.2024.3385117}}</p>
+		</div>
+
+		<div id="J1_abstract" class="info">
+			  <p>The IPv6 over time-slotted channel hopping mode of IEEE 802.15.4e (6TiSCH) wireless protocol stack is released to offer high-throughput, low and bounded latency, energy efficient, and reliable communication in industrial Internet of Things (IoT). However, scheduling communication cell among the nodes for exchanging sensory data is not trivial in 6TiSCH networks when the network traffic is highly dynamic and unpredictable. The existing autonomous scheduling schemes suffer from static allocation, high end-to-end latency, and high energy consumption. To address the abovementioned problems, in this work, we propose on-the-fly autonomous slot allocation (OASA) scheme to schedule slots for adaptive traffic in 6TiSCH networks autonomously and immediately. OASA also enables a low radio-duty-cycle of the nodes when network traffic is less, which is not considered by any existing adaptive autonomous schedulers. To validate the effectiveness of OASA, we implemented it on Contiki-NG and performed testbed experiments on FIT IoT-LAB. The testbed experiment results demonstrate the effectiveness of OASA in terms of latency, packet delivery ratio, and energy consumption compared to the existing autonomous scheduling schemes.</p>
+		</div>
 					
 				</li>
 				  <li> <span class="label label-success">IEEE JIoT</span> A. Hazra, <b> A. Kalita</b>, and M. Gurusamy, “Distributed Service Provisioning with Collaboration of Edge and Cloud in Industry 5.0” in <b> IEEE Internet of Things Journal</b>, 2024. <a class="PDF_button">Accepted</a> <a href="https://ieeexplore.ieee.org/document/10477502" class="PDF_button">PDF</a> </li>
