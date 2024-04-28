@@ -104,6 +104,15 @@
 	  color: #ff0066; /* Change text color on hover */
 	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lighter shadow on hover */
 	}    
+
+	.info {
+	    display: none;
+	    border: 2px solid #800000; /* Maroon border */
+	    background-color: #f4f4f4; /* Light gray background */
+	    padding: 20px; /* Increased padding for better spacing */
+	    border-radius: 10px; /* Rounded corners */
+	    margin-bottom: 20px; /* Added space below the box */
+	  }    
    </style>
 
 	<!-- Google tag (gtag.js) -->
@@ -144,7 +153,13 @@
                               <ol class="gradient-list" reversed>
 				<h3> <span class="label label-default">Journals</span></h3>
 				<hr>
-				<li> <span class="label label-success">IEEE TII</span> <b> A. Kalita</b>, and M. Gurusamy, “On-the-Fly Autonomous Slot Allocation in 6TiSCH-based Industrial IoT Networks” in <b> IEEE Transactions on Industrial Informatics</b>, 2024.  <a class="PDF_button">Accepted</a> <a href="https://ieeexplore.ieee.org/document/10504655"class="PDF_button">PDF</a> </li>
+				<li> <span class="label label-success">IEEE TII</span> <b> A. Kalita</b>, and M. Gurusamy, “On-the-Fly Autonomous Slot Allocation in 6TiSCH-based Industrial IoT Networks” in <b> IEEE Transactions on Industrial Informatics</b>, 2024.  <a class="PDF_button">Accepted</a> <a href="https://ieeexplore.ieee.org/document/10504655"class="PDF_button">PDF</a> <PDF_button onclick="toggleInfo('J1')">BibTex</PDF_button>
+<div id="J1" class="info">
+  <p>This is the information for button 1 that will appear and disappear when you click button 1.</p>
+  <p>This can be any kind of content you want.</p>
+</div>
+					
+				</li>
 				  <li> <span class="label label-success">IEEE JIoT</span> A. Hazra, <b> A. Kalita</b>, and M. Gurusamy, “Distributed Service Provisioning with Collaboration of Edge and Cloud in Industry 5.0” in <b> IEEE Internet of Things Journal</b>, 2024. <a class="PDF_button">Accepted</a> <a href="https://ieeexplore.ieee.org/document/10477502" class="PDF_button">PDF</a> </li>
 				 <li> <span class="label label-success">IEEE JIoT</span> A. Hazra, <b> A. Kalita</b>, and M. Gurusamy, “Meeting the Requirements of Internet of Things: The Promise of Edge Computing” in <b> IEEE Internet of Things Journal</b>, 2023. <a class="PDF_button">Accepted</a> <a href="https://ieeexplore.ieee.org/abstract/document/10342693"class="PDF_button">PDF</a> </li>       		   
 				 <li><span class="label label-success">IEEE NL</span><b> A. Kalita</b>, A. Hazra and M. Gurusamy, “Parrando’s Paradox based Enhanced Beacon Transmission in 6TiSCH Networks” in <b> IEEE Networking Letters</b>, vol. 5, no. 4, pp. 204-207, 2023. <a href="https://ieeexplore.ieee.org/document/10121813"class="PDF_button">PDF</a></li>     
@@ -286,6 +301,16 @@ Multi-UAV System with Efficient Task Offloading” in IEEE 99th Vehicular Techno
 	        }
 	
 	        window.addEventListener("scroll", reveal);
+
+
+	  function toggleInfo(infoId) {
+	    var info = document.getElementById(infoId);
+	    if (info.style.display === "none") {
+	      info.style.display = "block";
+	    } else {
+	      info.style.display = "none";
+	    }
+  }
 	   
   </script>	
     <!-- Javascript -->          
