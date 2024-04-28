@@ -157,7 +157,7 @@
 
 	<div class="main">	
 		<h3>Adaptive Resource Allocation for Faster Formation of 6TiSCH IoT Networks</h3>	
-		<p>The 6TiSCH (IPv6 over TSCH mode of IEEE 802.15.4e) is a wireless networking standard designed to provide IPv6-supported Time Slotted Channel Hopping (TSCH) communication for the Industrial Internet of Things (IIoT) and other critical applications. The formation of a 6TiSCH network is challenging due to the inherent channel hopping feature of TSCH, where new joining nodes do not know in which channel and at what time control packets are being transmitted by the already joined nodes. In addition, the resource allocation by the 6TiSCH-MC (RFC 8180) standard for network bootstrapping is static and does not provide any mechanism to handle congestion in the shared cell used for transmitting control packets. Moreover, the 6TiSCH-MC standard does not provide information regarding the transmission rates of different control packets used to form the network. Therefore, I have augmented the 6TiSCH-MC standard by introducing updated mechanisms to achieve faster formation of 6TiSCH IoT networks, including varying the beacon frame generation interval of the nodes <a href="" target="_blank">[TMC'21]</a>, enabling opportunistic <a href="" target="_blank">[TIoT'21]</a> and fair <a href="" target="_blank">[JIoT'21]</a> channel access schemes, and providing mechanisms for utilizing all available physical channels <a href="" target="_blank">[JIoT'21]</a>, <a href="" target="_blank">[TMC'23]</a>. I have also opened several research directions on the faster formation of 6TiSCH networks, such as 6TiSCH formation in the presence of malicious nodes, asynchronous networks, and SDN control traffic  <a href="" target="_blank">[TIoT'22]</a>.  <a onclick="toggleInfo('Project1')" class="PDF_button magenta">Published Papers</a> </p>
+		<p>The 6TiSCH (IPv6 over TSCH mode of IEEE 802.15.4e) is a wireless networking standard designed to provide IPv6-supported Time Slotted Channel Hopping (TSCH) communication for the Industrial Internet of Things (IIoT) and other critical applications. The formation of a 6TiSCH network is challenging due to the inherent channel hopping feature of TSCH, where new joining nodes do not know in which channel and at what time control packets are being transmitted by the already joined nodes. In addition, the resource allocation by the 6TiSCH-MC (RFC 8180) standard for network bootstrapping is static and does not provide any mechanism to handle congestion in the shared cell used for transmitting control packets. Moreover, the 6TiSCH-MC standard does not provide information regarding the transmission rates of different control packets used to form the network. Therefore, I have augmented the 6TiSCH-MC standard by introducing updated mechanisms to achieve faster formation of 6TiSCH IoT networks, including varying the beacon frame generation interval of the nodes <a href="" target="_blank">[1]</a>, enabling opportunistic <a href="" target="_blank">[2]</a> and fair <a href="" target="_blank">[4, 5]</a> channel access schemes, and providing mechanisms for utilizing all available physical channels <a href="" target="_blank">[3]</a>, <a href="" target="_blank">[7]</a>. I have also opened several research directions on the faster formation of 6TiSCH networks, such as 6TiSCH formation in the presence of malicious nodes, asynchronous networks, and SDN control traffic  <a href="" target="_blank">[6]</a>.  <a onclick="toggleInfo('Project1')" class="PDF_button magenta">Published Papers</a> </p>
 					
 		<div id="Project1" class="info">
 			  <ol class="gradient-list" reversed>
@@ -320,8 +320,55 @@
     
 	 <div class="main">   
 	      <h3>Routing Attacks on RPL-based IoT Networks and their Counter Measure</h3>
-	      <p>IETF's IPv6 Routing Protocol for Low power and Lossy Networks (RPL) (RFC 6550) is vulnerable to several security threats, including sinkhole attack, sybil attack, hello flooding attack, wormhole attacks, and many more. Among these attacks, the DODAG Information Solicitation (DIS) attack targets the service availability, specifically the energy consumption of legitimate nodes and network bandwidth exhaustion. Initially, I set up a testbed of 25 IoT devices (TI CC2650, CC2538, R-Pi) and experimentally evaluated the impact of the DIS attack during 6TiSCH network formation. I showed that the attacker does not require expensive resources or access to sensitive network information to execute the DIS attack [COMML'22]. Later, I developed a non-cooperative gaming model to determine the optimal probability of responding to a DIS packet. Subsequently, I designed a trust model to detect malicious DIS transmissions in 6TiSCH networks. Finally, I merged the proposed gaming and trust models to reduce the impact of the DIS attack in 6TiSCH networks [JIoT'22].</p>
-	    </div>   
+	      <p>IETF's IPv6 Routing Protocol for Low power and Lossy Networks (RPL) (RFC 6550) is vulnerable to several security threats, including sinkhole attack, sybil attack, hello flooding attack, wormhole attacks, and many more. Among these attacks, the DODAG Information Solicitation (DIS) attack targets the service availability, specifically the energy consumption of legitimate nodes and network bandwidth exhaustion. Initially, I set up a testbed of 25 IoT devices (TI CC2650, CC2538, R-Pi) and experimentally evaluated the impact of the DIS attack during 6TiSCH network formation. I showed that the attacker does not require expensive resources or access to sensitive network information to execute the DIS attack [COMML'22]. Later, I developed a non-cooperative gaming model to determine the optimal probability of responding to a DIS packet. Subsequently, I designed a trust model to detect malicious DIS transmissions in 6TiSCH networks. Finally, I merged the proposed gaming and trust models to reduce the impact of the DIS attack in 6TiSCH networks [JIoT'22]. <a onclick="toggleInfo('Project2')" class="PDF_button magenta">Published Papers</a> </p>
+					
+		<div id="Project2" class="info">
+			  <ol class="gradient-list" reversed>
+			  <li><b> A. Kalita</b>, M. Gurusamy, and M. Khatua, “A Gaming and Trust Model based Counter Measure for DIS Attack on 6TiSCH IoT Networks” in <b> IEEE Internet of Things Journal</b>, IF-10.238, vol. 10, no. 11, pp. 9727 - 9737, 2023.<br>
+					 <a href="https://ieeexplore.ieee.org/document/10007639"class="PDF_button green">PDF</a>  <a onclick="toggleInfo('J9_abstract')" class="PDF_button blue">Abstract</a> <a onclick="toggleInfo('J9')" class="PDF_button orange">BibTeX</a>
+					
+		<div id="J9_abstract" class="info">
+			  <p>The 6TiSCH communication architecture provides delay-bounded packet delivery, energy efficient, and reliable data-delivering communication in mission-critical Internet of Things (IoT) applications. It uses IETF’s 6TiSCH minimal configuration (6TiSCH-MC) standard for resource allocation during network formation and routing using a routing protocol for low power and lossy network (RPL) as routing protocol. In RPL, the DODAG information solicitation (DIS) control packet is used to solicit routing information from the existing networks. However, it is observed that malicious transmission of this DIS packet can severely affect the 6TiSCH networks in terms of nodes’ network joining time and energy consumption. Therefore, designing countermeasures of DIS attack in 6TiSCH network has become critically important. Additionally, the existing works neither considered all the possible parameters together for detecting DIS attack nor energy efficient, and create control packet overhead. In this work, we model noncooperative gaming to determine the optimal probability of responding to a DIS packet. Subsequently, we design a trust model to detect malicious DIS transmission in 6TiSCH networks. Finally, we merge both the proposed gaming model and trust model to propose a scheme—gaming and trust-based countermeasure (GTCM) to reduce the effect of DIS attack in 6TiSCH networks. We implement the GTCM on Contiki-NG and validate it using open source FIT IoT-LAB testbed. Our experimental testbed results show that GTCM reduces the effect of DIS attack in terms of pledges’ (new nodes) joining time and energy consumption significantly.</p>
+		</div>
+		<div id="J9" class="info">
+			  <p>@ARTICLE{10007639,
+		  author={Kalita, Alakesh and Gurusamy, Mohan and Khatua, Manas},
+		  journal={IEEE Internet of Things Journal}, 
+		  title={{A Gaming and Trust-Model-Based Countermeasure for DIS Attack on 6TiSCH IoT Networks}}, 
+		  year={2023},
+		  volume={10},
+		  number={11},
+		  pages={9727-9737},
+		  doi={10.1109/JIOT.2023.3234300}}</p>
+		</div>		  		   
+		 </li>    
+		      
+				 <li><b> A. Kalita</b>, A. Brighente, M. Khatua, M. Conti, “Effect of DIS Attack in 6TiSCH Network Formation” in <b> IEEE Communication Letters</b>, IF=3.55, vol. 26, no. 5, pp. 1190-1193, 2022. <br> 
+	<a href="https://ieeexplore.ieee.org/document/9724242"class="PDF_button green">PDF</a> <a onclick="toggleInfo('J6_abstract')" class="PDF_button blue">Abstract</a> <a onclick="toggleInfo('J6')" class="PDF_button orange">BibTeX</a>
+					
+		<div id="J6_abstract" class="info">
+			  <p>The 6TiSCH standard provides minimum latency and reliability in mission-critical IoT applications. To optimize resource allocation during 6TiSCH network formation, IETF released the 6TiSCH minimal configuration (6TiSCH-MC) standard. 6TiSCH-MC considered IETF’s IPv6 Routing Protocol for Low power and Lossy network (RPL) as a routing protocol for both upward and downward routing. In RPL, new joining nodes or joined nodes transmit DODAG Information Solicitation (DIS) requests to get routing information from the network. However, we observe that malicious node(s) can severely affect 6TiSCH networks by sending multiple DIS requests. In this letter, we show and experimentally evaluate on real devices the impact of the DIS attack during 6TiSCH networks formation. We show that the attacker does not need expensive resources or access to the network’s sensitive information to execute the DIS attack . Our testbed experiments show that the DIS attack significantly degrades the nodes’ joining time and energy consumption, increasing them by 34% and 16%, respectively, compared to normal functioning during 6TiSCH network formation.</p>
+		</div>
+		<div id="J6" class="info">
+			  <p>@ARTICLE{9724242,
+			  author={Kalita, Alakesh and Brighente, Alessandro and Khatua, Manas and Conti, Mauro},
+			  journal={IEEE Communications Letters}, 
+			  title={Effect of DIS Attack on 6TiSCH Network Formation}, 
+			  year={2022},
+			  volume={26},
+			  number={5},
+			  pages={1190-1193},
+			  doi={10.1109/LCOMM.2022.3155992}}</p>
+		</div>		  		   
+				 </li> 		  
+
+
+				  
+	     </ol>	  
+		
+	</div>
+	</div>	
+   
 
     
 	 <div class="main"> 
