@@ -77,14 +77,14 @@
 		}
 -->
      <style>	
-	     
-	       .info {
+		     .info {
+		    display: none;
 		    border: 2px solid #800000; /* Maroon border */
 		    background-color: #f4f4f4; /* Light gray background */
 		    padding: 1px 10px;
 		    border-radius: 10px; /* Rounded corners */
-		    margin-bottom: 20px; /* Added space below the box */
-		    margin-top: 20px; 	
+		    margin-bottom: 10px; /* Added space below the box */
+		    margin-top: 15px; 	
 		  }    
 	
 		 .info p {
@@ -317,6 +317,18 @@
     <footer class="footer">
 	 <div id="includedMyFooter"></div>
     </footer>
+     <script>	
+
+	  function toggleInfo(infoId) {
+	    var info = document.getElementById(infoId);
+	    if (info.style.display === "none") {
+	      info.style.display = "block";
+	    } else {
+	      info.style.display = "none";
+	    }
+ 	 }
+	   
+	  </script>
  
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
