@@ -126,6 +126,19 @@
 		    margin: 5px; /* Remove default margins */
 		    padding: 5px; /* Remove default padding */
 		}   
+
+	        .reveal{
+	            position: relative;
+	            transform: translateY(150px);
+	            opacity: 0;
+	            transition: 1s all ease;
+	        }
+	
+	        .reveal.active{
+	            transform: translateY(0);
+	            opacity: 1;
+	        }    
+
 	</style>
 
 	<!-- Google tag (gtag.js) -->
@@ -155,7 +168,7 @@
                         <div class="content" >
                             
 
-	<div class="main">	
+	<div class="main" reveal>	
 		<h3>Adaptive Resource Allocation for Faster Formation of 6TiSCH IoT Networks</h3>	
 		<p>The 6TiSCH (IPv6 over TSCH mode of IEEE 802.15.4e) is a wireless networking standard designed to provide IPv6-supported Time Slotted Channel Hopping (TSCH) communication for the Industrial Internet of Things (IIoT) and other critical applications. The formation of a 6TiSCH network is challenging due to the inherent channel hopping feature of TSCH, where new joining nodes do not know in which channel and at what time control packets are being transmitted by the already joined nodes. In addition, the resource allocation by the 6TiSCH-MC (RFC 8180) standard for network bootstrapping is static and does not provide any mechanism to handle congestion in the shared cell used for transmitting control packets. Moreover, the 6TiSCH-MC standard does not provide information regarding the transmission rates of different control packets used to form the network. Therefore, I have augmented the 6TiSCH-MC standard by introducing updated mechanisms to achieve faster formation of 6TiSCH IoT networks, including varying the beacon frame generation interval of the nodes <a href="" target="_blank">[1]</a>, enabling opportunistic <a href="" target="_blank">[2]</a> and fair <a href="" target="_blank">[4, 5]</a> channel access schemes, and providing mechanisms for utilizing all available physical channels <a href="" target="_blank">[3]</a>, <a href="" target="_blank">[7]</a>. I have also opened several research directions on the faster formation of 6TiSCH networks, such as 6TiSCH formation in the presence of malicious nodes, asynchronous networks, and SDN control traffic  <a href="" target="_blank">[6]</a>.  <a onclick="toggleInfo('Project1')" class="PDF_button magenta">Published Papers</a> </p>
 					
@@ -318,7 +331,7 @@
 	</div>	
 
     
-	 <div class="main">   
+	 <div class="main" reveal>   
 	      <h3>Routing Attacks on RPL-based IoT Networks and their Counter Measure</h3>
 	      <p>IETF's IPv6 Routing Protocol for Low power and Lossy Networks (RPL) (RFC 6550) is vulnerable to several security threats, including sinkhole attack, sybil attack, hello flooding attack, wormhole attacks, and many more. Among these attacks, the DODAG Information Solicitation (DIS) attack targets the service availability, specifically the energy consumption of legitimate nodes and network bandwidth exhaustion. Initially, I set up a testbed of 25 IoT devices (TI CC2650, CC2538, R-Pi) and experimentally evaluated the impact of the DIS attack during 6TiSCH network formation. I showed that the attacker does not require expensive resources or access to sensitive network information to execute the DIS attack [2]. Later, I developed a non-cooperative gaming model to determine the optimal probability of responding to a DIS packet. Subsequently, I designed a trust model to detect malicious DIS transmissions in 6TiSCH networks. Finally, I merged the proposed gaming and trust models to reduce the impact of the DIS attack in 6TiSCH networks [1]. <a onclick="toggleInfo('Project2')" class="PDF_button magenta">Published Papers</a> </p>
 					
@@ -371,7 +384,7 @@
    
 
     
-	 <div class="main"> 
+	 <div class="main" reveal> 
 	  	<h3>Improving the performance of IoT Networks</h3>
 		<p>Through experimental evaluations on the FIT IoT-LAB testbed, I observed that RPL-based LLNs suffer from load balancing issues caused by the default parent selection mechanism of the RPL routing protocol. As a result, overloaded nodes experience reduced lifetime due to increased energy consumption, and the throughput is significantly decreased due to frame discarding resulting from buffer overflow. Additionally, improper management of the limited queue/buffer size of the resource-constrained IoT nodes contributes to the degradation of LLN performance. Moreover, efficient and collision-free data transmission cell scheduling is crucial to ensure reliable communication among the nodes in IoT networks. With a large number of nodes having varying communication requirements and priorities, it becomes essential to efficiently schedule data transmission cells to avoid collisions, maximize channel utilization, and meet Quality of Service (QoS) requirements for different applications. As such, I have proposed schemes for load balancing and buffer management [1] , and efforts are underway towards developing adaptive and autonomous cell scheduling strategies to improve IoT network performance, taking into consideration available bandwidth, network topology, and traffic load. <a onclick="toggleInfo('Project3')" class="PDF_button magenta">Published Papers</a> </p>
 					
@@ -399,7 +412,7 @@
 	</div>	 
 
 
-	<div class="main">
+	<div class="main" reveal>
   		<h3>Game theoretic Resource Allocation in Metaverse</h3>
 		<p>Metaverse is a next-generation internet-based platform that enables virtual interaction between metaverse users and the living and non-living entities of the physical world in real-time. To facilitate real-time and seamless interaction between the physical and virtual worlds, the metaverse system requires the integration of various technologies such as sensing, communication, and high-computing devices. As metaverse is currently in its early stages, both QoS and QoE will play a significant role in its future adoption. However, the existing resource allocation techniques may not be adequate for metaverse due to its higher complexity, real-time, dynamic, interactive, and immersive nature. So far, I have formulated  a multi-leader and multi-follower based Stackelberg game for resource allocation among IoT devices and Virtual Service Providers (VSPs). The proposed game ensures a balance between the quality of data (i.e., QoE) and the cost and profit associated with data collection (i.e., revenue generated by the IoT devices). The proposed model has been solved using ADMM and simulated using MATLAB. The obtained numerical results demonstrate the effectiveness and efficiency of the proposed model. I am also working towards to provide cost-effective computational resource allocation among the cloud/edge service providers and VSPs depending on user requirements.<a onclick="toggleInfo('Project4')" class="PDF_button magenta">Published Papers</a> </p>
 					
@@ -429,6 +442,24 @@
 	 <div id="includedMyFooter"></div>
     </footer>
      <script>	
+	function reveal() {
+	            var reveals = document.querySelectorAll(".reveal");
+	
+	            for (var i = 0; i < reveals.length; i++) {
+	                var windowHeight = window.innerHeight;
+	                var elementTop = reveals[i].getBoundingClientRect().top;
+	                var elementVisible = 30;
+	
+	                if (elementTop < windowHeight - elementVisible) {
+	                    reveals[i].classList.add("active");
+	                } else {
+	                    reveals[i].classList.remove("active");
+	                }
+	            }
+	        }
+	
+	        window.addEventListener("scroll", reveal);
+ 
 
 	  function toggleInfo(infoId) {
 	    var info = document.getElementById(infoId);
