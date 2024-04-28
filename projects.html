@@ -320,7 +320,7 @@
     
 	 <div class="main">   
 	      <h3>Routing Attacks on RPL-based IoT Networks and their Counter Measure</h3>
-	      <p>IETF's IPv6 Routing Protocol for Low power and Lossy Networks (RPL) (RFC 6550) is vulnerable to several security threats, including sinkhole attack, sybil attack, hello flooding attack, wormhole attacks, and many more. Among these attacks, the DODAG Information Solicitation (DIS) attack targets the service availability, specifically the energy consumption of legitimate nodes and network bandwidth exhaustion. Initially, I set up a testbed of 25 IoT devices (TI CC2650, CC2538, R-Pi) and experimentally evaluated the impact of the DIS attack during 6TiSCH network formation. I showed that the attacker does not require expensive resources or access to sensitive network information to execute the DIS attack [COMML'22]. Later, I developed a non-cooperative gaming model to determine the optimal probability of responding to a DIS packet. Subsequently, I designed a trust model to detect malicious DIS transmissions in 6TiSCH networks. Finally, I merged the proposed gaming and trust models to reduce the impact of the DIS attack in 6TiSCH networks [JIoT'22]. <a onclick="toggleInfo('Project2')" class="PDF_button magenta">Published Papers</a> </p>
+	      <p>IETF's IPv6 Routing Protocol for Low power and Lossy Networks (RPL) (RFC 6550) is vulnerable to several security threats, including sinkhole attack, sybil attack, hello flooding attack, wormhole attacks, and many more. Among these attacks, the DODAG Information Solicitation (DIS) attack targets the service availability, specifically the energy consumption of legitimate nodes and network bandwidth exhaustion. Initially, I set up a testbed of 25 IoT devices (TI CC2650, CC2538, R-Pi) and experimentally evaluated the impact of the DIS attack during 6TiSCH network formation. I showed that the attacker does not require expensive resources or access to sensitive network information to execute the DIS attack [2]. Later, I developed a non-cooperative gaming model to determine the optimal probability of responding to a DIS packet. Subsequently, I designed a trust model to detect malicious DIS transmissions in 6TiSCH networks. Finally, I merged the proposed gaming and trust models to reduce the impact of the DIS attack in 6TiSCH networks [1]. <a onclick="toggleInfo('Project2')" class="PDF_button magenta">Published Papers</a> </p>
 					
 		<div id="Project2" class="info">
 			  <ol class="gradient-list" reversed>
@@ -373,8 +373,30 @@
     
 	 <div class="main"> 
 	  	<h3>Improving the performance of IoT Networks</h3>
-		<p>Through experimental evaluations on the FIT IoT-LAB testbed, I observed that RPL-based LLNs suffer from load balancing issues caused by the default parent selection mechanism of the RPL routing protocol. As a result, overloaded nodes experience reduced lifetime due to increased energy consumption, and the throughput is significantly decreased due to frame discarding resulting from buffer overflow. Additionally, improper management of the limited queue/buffer size of the resource-constrained IoT nodes contributes to the degradation of LLN performance. Moreover, efficient and collision-free data transmission cell scheduling is crucial to ensure reliable communication among the nodes in IoT networks. With a large number of nodes having varying communication requirements and priorities, it becomes essential to efficiently schedule data transmission cells to avoid collisions, maximize channel utilization, and meet Quality of Service (QoS) requirements for different applications. As such, I have proposed schemes for load balancing and buffer management [INFOCOM-CNERT-WKSH'23] , and efforts are underway towards developing adaptive and autonomous cell scheduling strategies to improve IoT network performance, taking into consideration available bandwidth, network topology, and traffic load. </p>
-	  </div>   
+		<p>Through experimental evaluations on the FIT IoT-LAB testbed, I observed that RPL-based LLNs suffer from load balancing issues caused by the default parent selection mechanism of the RPL routing protocol. As a result, overloaded nodes experience reduced lifetime due to increased energy consumption, and the throughput is significantly decreased due to frame discarding resulting from buffer overflow. Additionally, improper management of the limited queue/buffer size of the resource-constrained IoT nodes contributes to the degradation of LLN performance. Moreover, efficient and collision-free data transmission cell scheduling is crucial to ensure reliable communication among the nodes in IoT networks. With a large number of nodes having varying communication requirements and priorities, it becomes essential to efficiently schedule data transmission cells to avoid collisions, maximize channel utilization, and meet Quality of Service (QoS) requirements for different applications. As such, I have proposed schemes for load balancing and buffer management [INFOCOM-CNERT-WKSH'23] , and efforts are underway towards developing adaptive and autonomous cell scheduling strategies to improve IoT network performance, taking into consideration available bandwidth, network topology, and traffic load. <a onclick="toggleInfo('Project3')" class="PDF_button magenta">Published Papers</a> </p>
+					
+		<div id="Project3" class="info">
+			  <ol class="gradient-list" reversed>
+				 <li><span class="label label-success">IEEE INFOCOM</span><b> A. Kalita</b>, A. Hazra, M. Gurusamy, “Efficient Schemes for Improved Performance in 6TiSCH Networks” in IEEE INFOCOM WKSHPS: The 10th International Workshop on Computer and Networking Experimental Research using Testbeds (CNERT'2023). <a href="https://ieeexplore.ieee.org/document/10225947"class="PDF_button green">PDF</a> <a onclick="toggleInfo('J6_abstract')" class="PDF_button blue">Abstract</a> <a onclick="toggleInfo('J6')" class="PDF_button orange">BibTeX</a>
+					
+		<div id="J6_abstract" class="info">
+			  <p>The 6TiSCH (IPv6 over Time Slotted Channel Hopping (TSCH) mode of IEEE 802.15.4e) network is standardized to provide high reliability, higher throughput, delay-bounded, and energy-efficient communication in various resource-constrained Internet of Things (IoT) networks. However, it is observed that 6TiSCH network suffers from load balancing issue due to the default parent selection mechanism of its de-facto routing protocol, RPL (Routing Protocol for Low power and Lossy network). Furthermore, the performance of a 6TiSCH network degrades due to improper management of nodes' queue/buffer. None of the existing works studied these problems in RPL-based 6TiSCH networks. Therefore, in this work, we first validate these two problems using testbed experiments. Then, we propose an Early Parent Switching (EPS) scheme to deal with the load balancing problem of RPL by which nodes are allowed to change their parents depending on the remaining queue capacity of the parents. We propose another scheme named Parrondo’ Paradox based Queue Management (PPQM) for efficiently managing the nodes' queue so that buffer overflow can be reduced. We implement EPS and PPQM on Contiki-NG OS and perform testbed experiments on FIT IoT-LAB. Testbed experiment results show that both the proposed schemes can significantly improve the performance of 6TiSCH networks.</p>
+		</div>
+		<div id="J6" class="info">
+			  <p>@INPROCEEDINGS{10225947,
+			  author={Kalita, Alakesh and Hazra, Abhishek and Gurusamy, Mohan},
+			  booktitle={IEEE INFOCOM 2023 - IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)}, 
+			  title={Efficient Schemes for Improved Performance in 6TiSCH Networks}, 
+			  year={2023},
+			  volume={},
+			  number={},
+			  pages={1-6},
+			  doi={10.1109/INFOCOMWKSHPS57453.2023.10225947}}</p>
+		</div>		  		   
+				 </li> 		  		  
+	     </ol>	  	
+	</div>
+	</div>	 
 
 
 	<div class="main">
