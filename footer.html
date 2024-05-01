@@ -66,11 +66,15 @@
         window.onscroll = function() {scrollFunction()};
 
         function scrollFunction() {
-            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 document.getElementById("scrollTopBtn").style.display = "block";
             } else {
                 document.getElementById("scrollTopBtn").style.display = "none";
             }
+	    
+            if (window.innerWidth < 600) {
+               document.getElementById("scrollTopBtn").style.left = 50%;
+            }	
     </script>
 
     
