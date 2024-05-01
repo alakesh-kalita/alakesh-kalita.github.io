@@ -1,3 +1,34 @@
+<style>
+        /* CSS for scroll to top button */
+        #scrollTopBtn {
+            display: none; /* Hide the button by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place the button 20px from the bottom */
+            right: 20px; /* Place the button 20px from the right */
+            z-index: 99; /* Set the z-index to make sure it's above other elements */
+            font-size: 24px; /* Button font size */
+            border: none; /* No border */
+            outline: none; /* No outline */
+            background-color: rgba(85, 85, 85, 0.7); /* Transparent background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Cursor type */
+            padding: 15px; /* Padding */
+            border-radius: 50%; /* Rounded corners */
+        }
+
+        /* Show the button when the user scrolls down 20px */
+        @media screen and (min-width: 601px) {
+            #scrollTopBtn {
+                display: block; /* Display the button for screens wider than 600px */
+            }
+        }
+
+        /* On hover, change background color */
+        #scrollTopBtn:hover {
+            background-color: rgba(51, 51, 51, 0.7);
+        }
+    </style>
+
 
 <div class="container text-center">
            <small class="copyright"><strong>&copy; 2020-2024 Alakesh Kalita.</strong></small>
@@ -9,4 +40,27 @@
 	     <a href="https://www.facebook.com/profile.php?id=100077436171241"> <img src="assets/images/facebook.png" width="31" height="31"> </a>	 
 	-->
 </div><!--//container-->
+
+<!-- Scroll to top button -->
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">&#9650;</button>
+
+    <script>
+        // JavaScript code for scrolling to top
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        // JavaScript code for displaying scroll to top button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollTopBtn").style.display = "none";
+            }
+        }
+    </script>
+
     
