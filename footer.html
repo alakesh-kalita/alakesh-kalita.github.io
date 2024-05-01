@@ -1,19 +1,24 @@
-<style>
+    <style>
         /* CSS for scroll to top button */
         #scrollTopBtn {
             display: none; /* Hide the button by default */
             position: fixed; /* Fixed position */
-            bottom: 40px; /* Place the button 20px from the bottom */
-            left: 3%; /* Place the button in the middle horizontally */
+            bottom: 20px; /* Place the button 20px from the bottom */
+            left: 50%; /* Place the button in the middle horizontally */
+            transform: translateX(-50%); /* Center the button horizontally */
             z-index: 99; /* Set the z-index to make sure it's above other elements */
-            font-size: 24px; /* Button font size */
+            font-size: 18px; /* Button font size */
             border: 2px solid #007bff; /* Border (blue color) */
-            outline: none; /* No outline */
-            background-color: transparent;
-            color: magenta; /* Text color */
+            background-color: transparent; /* Transparent background color */
+            color: #007bff; /* Text color (blue) */
             cursor: pointer; /* Cursor type */
-            padding: 10px; /* Padding */
-            border-radius: 50%; /* Rounded corners */
+            padding: 8px 12px; /* Reduced padding */
+            line-height: 1; /* Reset line-height */
+            font-weight: bold; /* Bold font */
+            font-family: Arial, sans-serif; /* Font family */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+            border-radius: 40%; /* Slightly rounded corners */
+            text-align: center; /* Center text horizontally */
         }
 
         /* Show the button when the user scrolls down 20px */
@@ -25,7 +30,14 @@
 
         /* On hover, change background color */
         #scrollTopBtn:hover {
-            border-color: #008080; /* Darker shade of blue on hover */
+            background-color: #008080; /* Darker shade of blue on hover */
+            color: #fff; /* Change text color to white on hover */
+        }
+
+        /* Style for the text below the symbol */
+        #scrollTopBtn span {
+            display: block; /* Display the text as block element */
+            font-size: 14px; /* Font size for the text */
         }
     </style>
 
@@ -42,7 +54,7 @@
 </div><!--//container-->
 
 <!-- Scroll to top button -->
-    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">&#9650;</button>
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">&#9650;<span>Top</span></button>
 
     <script>
         // JavaScript code for scrolling to top
