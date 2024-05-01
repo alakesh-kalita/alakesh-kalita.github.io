@@ -21,7 +21,17 @@
             text-align: center; /* Center text horizontally */
         }
 
+	@media screen and (min-width: 601px) {
+            #scrollTopBtn {
+                display: block; /* Display the button for screens wider than 600px */
+            }
+        }
 
+	@media only screen and (max-width: 767px) {
+		#scrollTopBtn {
+                display: block; /* Display the button for screens wider than 600px */
+            }
+	}    
         /* On hover, change background color */
         #scrollTopBtn:hover {
             background-color: #008080; /* Darker shade of blue on hover */
@@ -66,6 +76,8 @@
             } else {
                 document.getElementById("scrollTopBtn").style.display = "none";
             }
+	   if(window.innerWidth < 600)	{
+		   document.getElementById("scrollTopBtn").style.left = 50%;
         }
     </script>
 
