@@ -298,15 +298,19 @@
 			  <p>The 6TiSCH communication architecture provides delay-bounded packet delivery, energy efficient, and reliable data-delivering communication in mission-critical Internet of Things (IoT) applications. It uses IETF’s 6TiSCH minimal configuration (6TiSCH-MC) standard for resource allocation during network formation and routing using a routing protocol for low power and lossy network (RPL) as routing protocol. In RPL, the DODAG information solicitation (DIS) control packet is used to solicit routing information from the existing networks. However, it is observed that malicious transmission of this DIS packet can severely affect the 6TiSCH networks in terms of nodes’ network joining time and energy consumption. Therefore, designing countermeasures of DIS attack in 6TiSCH network has become critically important. Additionally, the existing works neither considered all the possible parameters together for detecting DIS attack nor energy efficient, and create control packet overhead. In this work, we model noncooperative gaming to determine the optimal probability of responding to a DIS packet. Subsequently, we design a trust model to detect malicious DIS transmission in 6TiSCH networks. Finally, we merge both the proposed gaming model and trust model to propose a scheme—gaming and trust-based countermeasure (GTCM) to reduce the effect of DIS attack in 6TiSCH networks. We implement the GTCM on Contiki-NG and validate it using open source FIT IoT-LAB testbed. Our experimental testbed results show that GTCM reduces the effect of DIS attack in terms of pledges’ (new nodes) joining time and energy consumption significantly.</p>
 		</div>
 		<div id="J9" class="info">
-			  <p>@ARTICLE{10007639,
-		  author={Kalita, Alakesh and Gurusamy, Mohan and Khatua, Manas},
-		  journal={IEEE Internet of Things Journal}, 
-		  title={{A Gaming and Trust-Model-Based Countermeasure for DIS Attack on 6TiSCH IoT Networks}}, 
-		  year={2023},
-		  volume={10},
-		  number={11},
-		  pages={9727-9737},
-		  doi={10.1109/JIOT.2023.3234300}}</p>
+		 <pre>
+       			 <code>
+	@ARTICLE{<span class="paper_id">10007639</span>,
+        <span class="key">author</span>={<span class="value">Kalita, Alakesh and Gurusamy, Mohan and Khatua, Manas</span>},
+        <span class="key">journal</span>={<span class="value">IEEE Internet of Things Journal</span>}, 
+        <span class="key">title</span>={{<span class="value">A Gaming and Trust-Model-Based Countermeasure for DIS Attack on 6TiSCH IoT Networks</span>}}, 
+        <span class="key">year</span>={<span class="value">2023</span>},
+        <span class="key">volume</span>={<span class="value">10</span>},
+        <span class="key">number</span>={<span class="value">11</span>},
+        <span class="key">pages</span>={<span class="value">9727-9737</span>},
+        <span class="key">doi</span>={<span class="value">10.1109/JIOT.2023.3234300</span>}}    
+       			 </code>
+		<pre>		  
 		</div>		  		   
 				 </li>     
 				      
@@ -317,15 +321,19 @@
 			  <p>IEEE has standardized the 802.15.4e Time Slotted Channel Hopping (TSCH) mode to provide stringent latency, higher reliability, and low duty-cycle in various Internet of Things (IoT) applications. TSCH eliminates interference and multi-path fading on channels, but its channel hopping feature severely affects the 6TiSCH (IPv6 over IEEE 802.15.4e TSCH mode) network formation. Further, 6TiSCH Minimal Configuration standard does not provide sufficient bandwidth (i.e., minimal cell) for quick transmission of control packets required by the new nodes (i.e., pledges) during their network association. Many works have been proposed on 6TiSCH network formation as it has high impact on network performance and lifetime. However, the existing works either did not use all the available physical channels while allocating minimal cell(s) or are not stable with topology changes. Therefore, this work proposes a T ime-Variant RGB (TRGB) model for minimal cell allocation and scheduling, which results in faster association of pledges and maintains network stability. We evaluate the TRGB using Markov Chain model and also on a real 60-node testbed in FIT IoT-LAB. Testbed results show that TRGB achieves 51% and 23% improvement over the state-of-the-art scheme in terms of joining time and energy consumption, respectively, while maintaining stability of the network.</p>
 		</div>
 		<div id="J8" class="info">
-			  <p>@ARTICLE{10032650,
-			  author={Kalita, Alakesh and Khatua, Manas},
-			  journal={IEEE Transactions on Mobile Computing}, 
-			  title={Time-Variant RGB Model for Minimal Cell Allocation and Scheduling in 6TiSCH Networks}, 
-			  year={2024},
-			  volume={23},
-			  number={2},
-			  pages={1803-1814},
-			  doi={10.1109/TMC.2023.3241021}}</p>
+    <pre>
+        <code>
+        @ARTICLE{<span class="paper_id">10032650</span>,
+        <span class="key">author</span>={<span class="value">Kalita, Alakesh and Khatua, Manas</span>},
+        <span class="key">journal</span>={<span class="value">IEEE Transactions on Mobile Computing</span>}, 
+        <span class="key">title</span>={{<span class="value">Time-Variant RGB Model for Minimal Cell Allocation and Scheduling in 6TiSCH Networks</span>}}, 
+        <span class="key">year</span>={<span class="value">2024</span>},
+        <span class="key">volume</span>={<span class="value">23</span>},
+        <span class="key">number</span>={<span class="value">2</span>},
+        <span class="key">pages</span>={<span class="value">1803-1814</span>},
+        <span class="key">doi</span>={<span class="value">10.1109/TMC.2023.3241021</span>}}
+        </code>
+    </pre>
 		</div>		  		   
 				      </li>     
 
@@ -337,21 +345,25 @@
 			  <p>The IPv6 over IEEE 802.15.4e TSCH mode (6TiSCH) network is intended to provide reliable and delay bounded communication in multi-hop and scalable Industrial Internet of Things (IIoT). The IEEE 802.15.4e Time Slotted Channel Hopping (TSCH) link layer protocol allows the nodes to change their physical channel after each transmission to eliminate interference and multi-path fading on the channels. However, due to this feature, new nodes (aka pledges) take more time to join the 6TiSCH network, resulting in significant energy consumption and inefficient data transmission, which makes the communication unreliable. Therefore, the formation of 6TiSCH network has gained immense interest among the researchers. To date, numerous solutions have been offered by various researchers in order to speed up the formation of 6TiSCH networks. This article briefly discusses about the 6TiSCH network and its formation process, followed by a detailed survey on the works that considered 6TiSCH network formation. We also perform theoretical analysis and real testbed experiments for a better understanding of the existing works related to 6TiSCH network formation. This article is concluded after summarizing the research challenges in 6TiSCH network formation and providing a few open issues in this domain of work.</p>
 		</div>
 		<div id="J7" class="info">
-			  <p>@article{10.1145/3536166,
-			author = {Kalita, Alakesh and Khatua, Manas},
-			title = {{6TiSCH – IPv6 Enabled Open Stack IoT Network Formation: A Review}},
-			year = {2022},
-			issue_date = {August 2022},
-			publisher = {Association for Computing Machinery},
-			address = {New York, NY, USA},
-			volume = {3},
-			number = {3},
-			url = {https://doi.org/10.1145/3536166},
-			doi = {10.1145/3536166},
-			journal = {ACM Trans. Internet Things},
-			month = {jul},
-			articleno = {24},
-			numpages = {36}}</p>
+    <pre>
+        <code>
+        @article{<span class="paper_id">10.1145/3536166</span>,
+        <span class="key">author</span>={<span class="value">Kalita, Alakesh and Khatua, Manas</span>},
+        <span class="key">title</span>={{<span class="value">6TiSCH – IPv6 Enabled Open Stack IoT Network Formation: A Review</span>}},
+        <span class="key">year</span>={<span class="value">2022</span>},
+        <span class="key">issue_date</span>={<span class="value">August 2022</span>},
+        <span class="key">publisher</span>={<span class="value">Association for Computing Machinery</span>},
+        <span class="key">address</span>={<span class="value">New York, NY, USA</span>},
+        <span class="key">volume</span>={<span class="value">3</span>},
+        <span class="key">number</span>={<span class="value">3</span>},
+        <span class="key">url</span>={<span class="value">https://doi.org/10.1145/3536166</span>},
+        <span class="key">doi</span>={<span class="value">10.1145/3536166</span>},
+        <span class="key">journal</span>={<span class="value">ACM Trans. Internet Things</span>},
+        <span class="key">month</span>={<span class="value">jul</span>},
+        <span class="key">articleno</span>={<span class="value">24</span>},
+        <span class="key">numpages</span>={<span class="value">36</span>}}
+        </code>
+    </pre>
 		</div>		  		   
 				 </li>  
 				      
