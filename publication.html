@@ -422,15 +422,19 @@
 			  <p>The IPv6 over the TSCH mode of IEEE 802.15.4e (6TiSCH) Working Group released 6TiSCH minimal configuration (6TiSCH-MC) standard for 6TiSCH network bootstrapping. 6TiSCH-MC allocates only one shared cell per slotframe, known as a minimal cell, to transmit all types of control packets. Our Markov Chain-based probabilistic analysis reveals that few network parameters have a high impact on the performance of 6TiSCH network formation due to increasing congestion in the minimal cell with the increased number of nodes. This work aims to improve the 6TiSCH network formation process by reducing congestion in the minimal cell. For this, the Trickle algorithm, which is used for controlling the rate of routing information-carrying packet transmission is modified so that sufficient routing information can be provided without congesting the minimal cell. To reduce the congestion further, a slotframe window (SW)-based adaptive scheme is proposed by which nodes are restricted to transmit their control packets frequently. The proposed dynamic Trickle algorithm and SW-based scheme are implemented on Contiki-NG and evaluated using FIT IoT-LAB testbed. The experimental results show that both the proposed schemes together improve the joining time and energy consumption of the pledges compared to the state-of-the-art schemes. Additionally, both the proposed schemes provide fair control packet transmission opportunities among the nodes in a network.</p>
 		</div>
 		<div id="J4" class="info">
-			  <p>@ARTICLE{9432409,
-			  author={Kalita, Alakesh and Khatua, Manas},
-			  journal={IEEE Internet of Things Journal}, 
-			  title={{Adaptive Control Packet Broadcasting Scheme for Faster 6TiSCH Network Bootstrapping}}, 
-			  year={2021},
-			  volume={8},
-			  number={24},
-			  pages={17395-17402},
-			  doi={10.1109/JIOT.2021.3080735}}</p>
+<pre>
+        <code>
+            @ARTICLE{<span class="paper_id">9432409</span>,
+            <span class="key">author</span>={<span class="value">Kalita, Alakesh and Khatua, Manas</span>},
+            <span class="key">journal</span>={<span class="value">IEEE Internet of Things Journal</span>}, 
+            <span class="key">title</span>={{<span class="value">Adaptive Control Packet Broadcasting Scheme for Faster 6TiSCH Network Bootstrapping</span>}}, 
+            <span class="key">year</span>={<span class="value">2021</span>},
+            <span class="key">volume</span>={<span class="value">8</span>},
+            <span class="key">number</span>={<span class="value">24</span>},
+            <span class="key">pages</span>={<span class="value">17395-17402</span>},
+            <span class="key">doi</span>={<span class="value">10.1109/JIOT.2021.3080735</span>}}
+        </code>
+    </pre>
 		</div>		  		   
 				 </li>
 
@@ -442,15 +446,19 @@
 			  <p>6TiSCH standardization helps the Industrial Internet of Things (IIoT) to achieve reliable and timed data delivery. It also deals with minimal resource allocation during network formation. However, faster network formation using minimum resources remains an active research issue. 6TiSCH minimal configuration standard (6TiSCH-MC) recommends to use only one cell per slotframe known as the minimal cell for all the nodes to transmit their network bootstrapping traffic. It is observed that, including 6TiSCH-MC, the existing schemes did not use all the available cells, and so, all the physical channels at the timeslot where this minimal cell resides, i.e., at timeslot zero. It results in underutilization of channel resources, and thus, higher network formation time. To leverage the available cells at timeslot zero of each slotframe, and thus to improve the network formation performance, an autonomous allocation and scheduling of minimal cell (TACTILE) is proposed. The main challenge is to utilize the available cells at timeslot zero as there is a minimal cell already scheduled for network bootstrapping. To address this issue, TACTILE distributes the location of the minimal cell as per nodes' EUI64 addresses along the different physical channels followed by scheduling them intelligently to avoid de-synchronization among nodes. Combined with Markov chain-based theoretical analysis, evaluation of TACTILE is done on the FIT IoT-LAB real testbed. The testbed results show that TACTILE can achieve 87% and 42% improvements in terms of joining time and energy consumption, respectively, compared to 6TiSCH-MC.</p>
 		</div>
 		<div id="J3" class="info">
-			  <p>@ARTICLE{9363324,
-			  author={Kalita, Alakesh and Khatua, Manas},
-			  journal={IEEE Internet of Things Journal}, 
-			  title={Autonomous Allocation and Scheduling of Minimal Cell in 6TiSCH Network}, 
-			  year={2021},
-			  volume={8},
-			  number={15},
-			  pages={12242-12250},
-			  doi={10.1109/JIOT.2021.3062115}}</p>
+<pre>
+        <code>
+            @ARTICLE{<span class="paper_id">9363324</span>,
+            <span class="key">author</span>={<span class="value">Kalita, Alakesh and Khatua, Manas</span>},
+            <span class="key">journal</span>={<span class="value">IEEE Internet of Things Journal</span>}, 
+            <span class="key">title</span>={{<span class="value">Autonomous Allocation and Scheduling of Minimal Cell in 6TiSCH Network</span>}}, 
+            <span class="key">year</span>={<span class="value">2021</span>},
+            <span class="key">volume</span>={<span class="value">8</span>},
+            <span class="key">number</span>={<span class="value">15</span>},
+            <span class="key">pages</span>={<span class="value">12242-12250</span>},
+            <span class="key">doi</span>={<span class="value">10.1109/JIOT.2021.3062115</span>}}
+        </code>
+    </pre>
 		</div>	
 				 </li> 
 
@@ -462,21 +470,25 @@
 			  <p>Network bootstrapping is one of the initial tasks executed in any wireless network such as Industrial Internet of Things (IIoT). Fast formation of IIoT network helps in resource conservation and efficient data collection. Our probabilistic analysis reveals that the performance of 6TiSCH based IIoT network formation degrades with time because of the following reasons: (i) IETF 6TiSCH Minimal Configuration (6TiSCH-MC) standard considered that beacon frame has the highest priority over all other control packets, (ii) 6TiSCH-MC provides minimal routing information during network formation, and (iii) sometimes, joined node can not transmit control packets due to high congestion in shared slots. To deal with these problems, this article proposes two schemes—opportunistic priority alternation and rate control (OPR) and opportunistic channel access (OCA). OPR dynamically adjusts the priority of control packets and provides sufficient routing information during network bootstrapping, whereas OCA allows the nodes having urgent packet to transmit it in less time. Along with the theoretical analysis of the proposed schemes, we also provide comparison-based simulation and real testbed experiment results to validate the proposed schemes together. The received results show significant performance improvements in terms of joining time and energy consumption.</p>
 		</div>
 		<div id="J2" class="info">
-			  <p>@article{10.1145/3430380,
-			author = {Kalita, Alakesh and Khatua, Manas},
-			title = {Opportunistic Transmission of Control Packets for Faster Formation of 6TiSCH Network},
-			year = {2021},
-			issue_date = {February 2021},
-			publisher = {Association for Computing Machinery},
-			address = {New York, NY, USA},
-			volume = {2},
-			number = {1},
-			url = {https://doi.org/10.1145/3430380},
-			doi = {10.1145/3430380},
-			journal = {ACM Trans. Internet Things},
-			month = {jan},
-			articleno = {5},
-			numpages = {29}}</p>
+<pre>
+        <code>
+            @article{<span class="paper_id">10.1145/3430380</span>,
+            <span class="key">author</span>={<span class="value">Kalita, Alakesh and Khatua, Manas</span>},
+            <span class="key">title</span>={{<span class="value">Opportunistic Transmission of Control Packets for Faster Formation of 6TiSCH Network</span>}},
+            <span class="key">year</span>={<span class="value">2021</span>},
+            <span class="key">issue_date</span>={<span class="value">February 2021</span>},
+            <span class="key">publisher</span>={<span class="value">Association for Computing Machinery</span>},
+            <span class="key">address</span>={<span class="value">New York, NY, USA</span>},
+            <span class="key">volume</span>={<span class="value">2</span>},
+            <span class="key">number</span>={<span class="value">1</span>},
+            <span class="key">url</span>={<span class="value">https://doi.org/10.1145/3430380</span>},
+            <span class="key">doi</span>={<span class="value">10.1145/3430380</span>},
+            <span class="key">journal</span>={<span class="value">ACM Trans. Internet Things</span>},
+            <span class="key">month</span>={<span class="value">jan</span>},
+            <span class="key">articleno</span>={<span class="value">5</span>},
+            <span class="key">numpages</span>={<span class="value">29</span>}}
+        </code>
+    </pre>
 		</div>	
 				 </li>   
 
@@ -488,15 +500,19 @@
 			  <p>Industrial applications of Internet of Things (IoT) demand high reliability, deterministic latency, and high scalability with energy efficiency to the communication and networking protocols. 6TiSCH is a time slotted channel hopping (TSCH) medium access control (MAC) protocol running under the IPv6 enabled higher layer protocols for industrial IoT (IIoT). In this paper, we theoretically analyze the network formation protocol in 6TiSCH network. Analysis reveals that the performance of the 6TiSCH network degrades when a pledge (new node) joins as it increases channel congestion by allowing to transmit beacon message. On the other hand, beacon transmission is essential to expand or reorganize the present network topology. To overcome this performance tradeoff, a channel condition based dynamic beacon interval (C2DBI) scheme is proposed in which beacon transmission interval varies with channel congestion status during network formation. Channel congestion status is estimated by each joined node in distributed manner, and subsequently changes its beacon generation interval to best fit with present condition. Finally the performance of C2DBI is compared with the minimal configuration standard and few other benchmark protocols. Analytical, simulation and real testbed results show that the proposed scheme outperforms the state of the art protocols in terms of joining time and energy consumption during network formation.</p>
 		</div>
 		<div id="J1" class="info">
-			  <p>@ARTICLE{9036988,
-			  author={Kalita, Alakesh and Khatua, Manas},
-			  journal={IEEE Transactions on Mobile Computing}, 
-			  title={Channel Condition Based Dynamic Beacon Interval for Faster Formation of 6TiSCH Network}, 
-			  year={2021},
-			  volume={20},
-			  number={7},
-			  pages={2326-2337},
-			  doi={10.1109/TMC.2020.2980828}}</p>
+<pre>
+        <code>
+            @ARTICLE{<span class="paper_id">9036988</span>,
+            <span class="key">author</span>={<span class="value">Kalita, Alakesh and Khatua, Manas</span>},
+            <span class="key">journal</span>={<span class="value">IEEE Transactions on Mobile Computing</span>}, 
+            <span class="key">title</span>={{<span class="value">Channel Condition Based Dynamic Beacon Interval for Faster Formation of 6TiSCH Network</span>}}, 
+            <span class="key">year</span>={<span class="value">2021</span>},
+            <span class="key">volume</span>={<span class="value">20</span>},
+            <span class="key">number</span>={<span class="value">7</span>},
+            <span class="key">pages</span>={<span class="value">2326-2337</span>},
+            <span class="key">doi</span>={<span class="value">10.1109/TMC.2020.2980828</span>}}
+        </code>
+    </pre>
 		</div>	
 				  </li>      
 			      </ol> 
