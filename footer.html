@@ -58,8 +58,16 @@
     <script>
         // JavaScript code for scrolling to top
         function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	    // For modern browsers
+	    if (window.scrollTo) {
+	        window.scrollTo({
+	            top: 0,
+	            behavior: 'smooth'
+	        });
+	    } else { // For Safari
+	        document.body.scrollTop = 0;
+	        document.documentElement.scrollTop = 0;
+	    }
         }
 
         // JavaScript code for displaying scroll to top button
