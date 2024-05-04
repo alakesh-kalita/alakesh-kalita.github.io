@@ -167,21 +167,24 @@
 		background-color: #f5f5dc;
 	    }    
 		.copy-btn {
-	        background-color: #007bff;
-	        color: #fff;
-	        border: none;
+	        background-color: transparent;
+		display: none;	
+	        color: black;
+	        border: 1px solid black;
 	        padding: 8px 16px;
 	        cursor: pointer;
 	        font-size: 14px;
 	        border-radius: 4px;
 	        outline: none;
 	        transition: background-color 0.3s;
-	        position: absolute;
-	        top: 5px;
-	        right: 5px;
+	        position: relative;
+	        margin-top: 5px;
 	    }
 	    .copy-btn:hover {
-	        background-color: #0056b3;
+	        background-color: rgba(0, 0, 0, 0.1);    
+	    }
+	    .info:hover .copy-btn {
+	        display: block;
 	    }
    </style>
 
@@ -243,7 +246,7 @@
 	<span class="key">pages</span>={<span class="value">1-10</span>},
 	<span class="key">doi</span>={<span class="value">10.1109/TII.2024.3385117</span>}}
 			  </code></pre>
-		<button class="copy-btn">Copy</button>		
+		<button class="copy-btn" onclick="copyToClipboard(this)">📋</button>		
 		</div>
 					
 				</li>
@@ -707,16 +710,15 @@ Multi-UAV System with Efficient Task Offloading” in IEEE 99th Vehicular Techno
 	      info.style.display = "none";
 	    }
   }
-	document.querySelector('.copy-btn').addEventListener('click', function() {
-	        var codeElement = this.parentNode.querySelector('code');
-	        var range = document.createRange();
-	        range.selectNode(codeElement);
-	        window.getSelection().removeAllRanges();
-	        window.getSelection().addRange(range);
-	        document.execCommand('copy');
-	        window.getSelection().removeAllRanges();
-	        alert('Code copied to clipboard!');
-	    });   
+	function copyToClipboard(button) {
+        var codeElement = button.parentNode.querySelector('code');
+        var range = document.createRange();
+        range.selectNode(codeElement);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+    }
   </script>	
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
