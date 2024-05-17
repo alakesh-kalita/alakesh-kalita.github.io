@@ -1,7 +1,7 @@
 [Visit the portfolio](https://alakesh-kalita.github.io/)
 
 ## Feedback:<br>
-If you like this portfolio, please consider giving a <strong> <span></span> style="color: red;">*</span> </strong> to this project! Your support is greatly appreciated.
+If you like this portfolio, please consider giving a <strong> <span> style="color: red;">*</span> </strong> to this project! Your support is greatly appreciated.
 
 ## Contributing: <br>
 I welcome contributions to improve this portfolio. If you have any suggestions or enhancements, feel free to open an issue or submit a pull request.
