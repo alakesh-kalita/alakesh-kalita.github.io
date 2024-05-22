@@ -44,8 +44,8 @@
             font-size: 18px; /* Corrected the font size declaration */
             color: #007bff;
         }
-       .body-tabs .nav-link.active + .section-inner {
-        display: block;
+       .body-tabs .nav-link.active {
+        color: blue;
        }
         .body-tab-content {
             margin-top: 0; /* Remove the top margin from all tab content */
@@ -88,9 +88,9 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="section-inner" style="display: none;">
+                    <div class="section-inner" >
                         <div class="tab-content">
-                            <div class="tab-pane fade body-tab-content" id="journals" role="tabpanel">
+                            <div class="tab-pane fade body-tab-content" id="journals" role="tabpanel" style="display: block;">
                                 <div class="row">
                                     <div class="col">
                                         <h4>Journals</h4>
