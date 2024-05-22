@@ -34,24 +34,28 @@
             $("#includedMyPopUP").load("popup.html");
         });
     </script>
+    <!--
     <style>
-       
-        .custom-nav-tabs .custom-nav-link.active {
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .nav-tabs .nav-link.active {
             color: blue;
         }
-        .custom-nav-tabs .custom-nav-link {
+        .nav-tabs .nav-link {
             color: #007bff;
         }
-        .custom-tab-content {
+        .tab-content {
             margin-top: 20px;
         }
-        .custom-heading {
+        h4 {
             margin-bottom: 20px;
         }
     </style>
+    -->
 </head>
 
-<body >
+<body>
     <!-- ******HEADER****** -->
     <header class="header">
         <div id="includedMyInfo"></div>
@@ -64,30 +68,30 @@
                     <div class="container">
                         <div class="row" style="margin-top:75px">
                             <div class="col">
-                                <ul class="nav nav-tabs custom-nav-tabs" role="tablist">
+                                <ul class="nav nav-tabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link custom-nav-link active" data-toggle="tab" href="#journals" role="tab">Journals</a>
+                                        <a class="nav-link active" data-toggle="tab" href="#journals" role="tab">Journals</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link custom-nav-link" data-toggle="tab" href="#conferences" role="tab">Conferences</a>
+                                        <a class="nav-link" data-toggle="tab" href="#conferences" role="tab">Conferences</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link custom-nav-link" data-toggle="tab" href="#technicalReports" role="tab">Technical Reports</a>
+                                        <a class="nav-link" data-toggle="tab" href="#technicalReports" role="tab">Technical Reports</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link custom-nav-link" data-toggle="tab" href="#bookChapters" role="tab">Book Chapters</a>
+                                        <a class="nav-link" data-toggle="tab" href="#bookChapters" role="tab">Book Chapters</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link custom-nav-link" data-toggle="tab" href="#posters" role="tab">Posters</a>
+                                        <a class="nav-link" data-toggle="tab" href="#posters" role="tab">Posters</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="custom-tab-content">
+                        <div class="tab-content">
                             <div class="tab-pane fade show active" id="journals" role="tabpanel">
                                 <div class="row">
                                     <div class="col">
-                                        <h4 class="custom-heading">Journals</h4>
+                                        <h4>Journals</h4>
                                         <p>List of journal publications will be updated soon.</p>
                                     </div>
                                 </div>
@@ -95,7 +99,7 @@
                             <div class="tab-pane fade" id="conferences" role="tabpanel">
                                 <div class="row">
                                     <div class="col">
-                                        <h4 class="custom-heading">Conferences</h4>
+                                        <h4>Conferences</h4>
                                         <p>List of conference publications will be updated soon.</p>
                                     </div>
                                 </div>
@@ -103,7 +107,7 @@
                             <div class="tab-pane fade" id="technicalReports" role="tabpanel">
                                 <div class="row">
                                     <div class="col">
-                                        <h4 class="custom-heading">Technical Reports</h4>
+                                        <h4>Technical Reports</h4>
                                         <ol>
                                             <li class="text-justify">Hello</li>
                                         </ol>
@@ -113,7 +117,7 @@
                             <div class="tab-pane fade" id="bookChapters" role="tabpanel">
                                 <div class="row">
                                     <div class="col">
-                                        <h4 class="custom-heading">Book Chapters</h4>
+                                        <h4>Book Chapters</h4>
                                         <p>List of book chapters will be updated soon.</p>
                                     </div>
                                 </div>
@@ -121,7 +125,7 @@
                             <div class="tab-pane fade" id="posters" role="tabpanel">
                                 <div class="row">
                                     <div class="col">
-                                        <h4 class="custom-heading">Posters</h4>
+                                        <h4>Posters</h4>
                                         <p>List of posters will be updated soon.</p>
                                     </div>
                                 </div>
