@@ -41,7 +41,12 @@
     <script>
         $(document).ready(function() {
             // Initially hide the section with id 'data'
-            $('#data').hide();
+            //$('#data').hide();
+	      
+		$('#journals').show(); // Show the selected tab pane
+
+                // Show the 'data' section
+                $('#data').show();	
 
             // Handle click events on navigation links
             $('.nav-link').click(function(e) {
