@@ -29,7 +29,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="jquery.js"></script> 
     <script>
         $(function(){
@@ -48,7 +48,7 @@
             color: blue;
         }
         .body-tab-content {
-            margin-top: 20px; /* Increased top margin to match the existing Journal tab */
+            margin-top: 0; /* Remove the top margin from all tab content */
         }
         .body-tab-content h4 {
             margin-bottom: 20px;
@@ -87,10 +87,10 @@
                             </ul>
                         </div>
                     </div>
-		     <hr>	
+                    <hr>
                     <div class="section-inner">
-                        <div class="tab-content body-tab-content">
-                            <div class="tab-pane fade show active" id="journals" role="tabpanel">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active body-tab-content" id="journals" role="tabpanel">
                                 <div class="row">
                                     <div class="col">
                                         <h4>Journals</h4>
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="conferences" role="tabpanel">
+                            <div class="tab-pane fade body-tab-content" id="conferences" role="tabpanel">
                                 <div class="row">
                                     <div class="col">
                                         <h4>Conferences</h4>
@@ -106,7 +106,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="technicalReports" role="tabpanel">
+                            <div class="tab-pane fade body-tab-content" id="technicalReports" role="tabpanel">
                                 <div class="row">
                                     <div class="col">
                                         <h4>Technical Reports</h4>
@@ -116,7 +116,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="bookChapters" role="tabpanel">
+                            <div class="tab-pane fade body-tab-content" id="bookChapters" role="tabpanel">
                                 <div class="row">
                                     <div class="col">
                                         <h4>Book Chapters</h4>
@@ -124,7 +124,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="posters" role="tabpanel">
+                            <div class="tab-pane fade body-tab-content" id="posters" role="tabpanel">
                                 <div class="row">
                                     <div class="col">
                                         <h4>Posters</h4>
@@ -153,8 +153,8 @@
     <script type="text/javascript" src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>   
-   <footer class="footer">
-	 <div id="includedMyPopUP"></div>
+    <footer class="footer">
+        <div id="includedMyPopUP"></div>
     </footer>	
 </body>
 
