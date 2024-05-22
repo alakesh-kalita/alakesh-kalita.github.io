@@ -40,19 +40,16 @@
 
     <script>
         $(document).ready(function() {
-            // Show the 'data' section initially
-            $('#data').show();
-
-            // Show the 'journals' tab pane by default
-            $('#journals').addClass('show active');
+            // Initially hide the section with id 'data'
+            $('#data').hide();
 
             // Handle click events on navigation links
             $('.nav-link').click(function(e) {
                 e.preventDefault(); // Prevent the default action of the link
 
                 var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
-                $('.tab-pane').removeClass('show active'); // Remove 'show' and 'active' classes from all tab panes
-                $(tabId).addClass('show active'); // Add 'show' and 'active' classes to the selected tab pane
+                $('.tab-pane').hide(); // Hide all tab panes
+                $(tabId).show(); // Show the selected tab pane
 
                 // Show the 'data' section
                 $('#data').show();
