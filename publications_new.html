@@ -41,12 +41,12 @@
     <style>
         /* Add specific styles for body tabs to avoid conflict */
         .body-tabs .nav-link {
-            font-size: 14px; /* Corrected the font size declaration */
+            font-size: 18px; /* Corrected the font size declaration */
             color: #007bff;
         }
-        .body-tabs .nav-link.active {
-            color: blue;
-        }
+       .body-tabs .nav-link.active + .section-inner {
+        display: block;
+       }
         .body-tab-content {
             margin-top: 0; /* Remove the top margin from all tab content */
         }
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="section-inner">
+                    <div class="section-inner" style="display: none;">
                         <div class="tab-content">
                             <div class="tab-pane fade body-tab-content" id="journals" role="tabpanel">
                                 <div class="row">
