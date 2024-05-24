@@ -41,15 +41,13 @@
     <script>
         $(document).ready(function() {
             // Initially hide the section with id 'data'
-            //$('#data').hide();
-	    $('#journals').show();
-	    $('#data').show();	
-	      	
+            $('#data').hide();
+	    	
 
             // Handle click events on navigation links
             $('.nav-link').click(function(e) {
 		
-		//$('#default_info').hide();	
+		('#default_info').hide();	
                 e.preventDefault(); // Prevent the default action of the link
 
                 var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
@@ -154,7 +152,7 @@
                                 </div>     -->
                 <div class="section-inner" id="data" >
                     <div class="tab-content">
-                        <div class="tab-pane fade body-tab-content" id="journals" role="tabpanel">
+                        <div class="tab-pane fade body-tab-content show" id="journals" role="tabpanel">
                             <div class="row">
                                 <div class="col">
                                     <h4>Journals</h4>
