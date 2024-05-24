@@ -48,7 +48,7 @@
             $('.nav-link').click(function(e) {
 		
 		$('#default_info').hide();	
-                //e.preventDefault(); // Prevent the default action of the link
+                e.preventDefault(); // Prevent the default action of the link
 
                 var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
                 $('.tab-pane').hide(); // Hide all tab panes
