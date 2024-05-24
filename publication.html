@@ -41,13 +41,13 @@
     <script>
         $(document).ready(function() {
             // Initially hide the section with id 'data'
-            //$('#data').hide();
+            $('#data').hide();
 	    	
 
             // Handle click events on navigation links
             $('.nav-link').click(function(e) {
 		
-		//$('#default_info').hide();	
+		$('#default_info').hide();	
                 //e.preventDefault(); // Prevent the default action of the link
 
                 var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
@@ -146,10 +146,10 @@
                     </div>
                 </div>
                 <hr> 
-<!-- 		 <div class="section-inner" id="default_info">
+		 <div class="section-inner" id="default_info">
 			<p> <strong><span style="color: red;">Copyright Info: </span></strong> All the publications and their contents are protected by copyright law. Unauthorized reproduction, distribution, or use of the material in any form or by any means, electronic or mechanical, including photocopying, recording, or any information storage and retrieval system, without prior written permission from the copyright owner, is prohibited.
  </p>
-                                </div>     -->
+                                </div>    
                 <div class="section-inner" id="data" >
                     <div class="tab-content">
                         <div class="tab-pane fade body-tab-content show" id="journals" role="tabpanel">
