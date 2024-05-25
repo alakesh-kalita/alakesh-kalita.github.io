@@ -72,6 +72,7 @@
                 $('.tab-pane').hide(); // Hide all tab panes
 
                 if (tabId === '#all') {
+		    $('.tab-pane').show();	
                     $('#journals').show(); 
 		    $('#conferences').show();
 		    $('#posters').show();
@@ -88,6 +89,9 @@
     </script>	
     <style>
         /* Add specific styles for body tabs to avoid conflict */
+	.tab-pane {
+            display: none;
+        }    
         .body-tabs .nav-link {
             font-size: 18px; /* Corrected the font size declaration */
             color: #007bff;
