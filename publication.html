@@ -38,7 +38,7 @@
         });
     </script>
 
-    <script>
+<!--     <script>
         $(document).ready(function() {
             // Initially hide the section with id 'data'
             $('#data').hide();
@@ -58,7 +58,31 @@
                 $('#data').show();
             });
         });
-    </script>
+    </script> -->
+    <script>
+        $(document).ready(function() {
+            // Initially hide the section with id 'data'
+            $('#data').hide();
+            
+            // Handle click events on navigation links
+            $('.nav-link').click(function(e) {
+                e.preventDefault(); // Prevent the default action of the link
+
+                var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
+                $('.tab-pane').hide(); // Hide all tab panes
+
+                if (tabId === '#all') {
+                    $('.tab-pane').show(); // Show all tab panes
+                } else {
+                    $(tabId).show(); // Show the selected tab pane
+                }
+
+                // Show the 'data' section
+                $('#data').show();
+                $('#default_info').hide(); // Hide the default info section
+            });
+        });
+    </script>	
     <style>
         /* Add specific styles for body tabs to avoid conflict */
         .body-tabs .nav-link {
@@ -144,6 +168,9 @@
                             </li>
 			    <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#misc" role="tab">Miscellaneous</a>
+                            </li>
+			    <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#all" role="tab">All</a>
                             </li>	
                         </ul>
                     </div>
