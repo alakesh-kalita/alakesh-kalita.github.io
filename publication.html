@@ -38,38 +38,12 @@
         });
     </script>
 
-<!--     <script>
-        $(document).ready(function() {
-            // Initially hide the section with id 'data'
-            $('#data').hide();
-	    	
-
-            // Handle click events on navigation links
-            $('.nav-link').click(function(e) {
-		
-		$('#default_info').hide();	
-                e.preventDefault(); // Prevent the default action of the link
-
-                var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
-                $('.tab-pane').hide(); // Hide all tab panes
-                $(tabId).show(); // Show the selected tab pane
-
-                // Show the 'data' section
-                $('#data').show();
-            });
-        });
-    </script> -->
     <script>
-        $(document).ready(function() {
-     //        // Initially hide the section with id 'data'
-     //        $('#data').show();
-	    // $('.tab-pane').show();	
+        $(document).ready(function() {	
 	    $('.nav-link[href="#journals"]').click();
 	    $('.tab-pane').hide(); // Hide all tab panes	
 	    $('#journals').show();	
 		
-            //$('.nav-link[href="#all"]').click();
-            // Handle click events on navigation links
             $('.nav-link').click(function(e) {
                 e.preventDefault(); // Prevent the default action of the link
 
@@ -88,18 +62,11 @@
                 } else {
                     $(tabId).show(); // Show the selected tab pane
                 }
-
-                // Show the 'data' section
-               // $('#data').show();
-                //$('#default_info').hide(); // Hide the default info section
             });
         });
     </script>	
     <style>
-        /* Add specific styles for body tabs to avoid conflict */
-/* 	.tab-pane {
-            display: none;
-        }     */
+
         .body-tabs .nav-link {
             font-size: 18px; /* Corrected the font size declaration */
             color: #007bff;
