@@ -72,8 +72,10 @@
                 $('.tab-pane').hide(); // Hide all tab panes
 
                 if (tabId === '#all') {
-                    $('#journals').show(); // Show all tab panes
-		    $('#conferences').show(); 		
+                    $('#journals').show(); 
+		    $('#conferences').show();
+		    $('#posters').show();
+		    $('#misc').show();	
                 } else {
                     $(tabId).show(); // Show the selected tab pane
                 }
@@ -98,6 +100,7 @@
         }
         .body-tab-content h4 {
             margin-bottom: 20px;
+	    color: blue;	
         }
 	 .info {
 	    display: none;
