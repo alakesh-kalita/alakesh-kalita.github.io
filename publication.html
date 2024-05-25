@@ -62,8 +62,10 @@
     <script>
         $(document).ready(function() {
             // Initially hide the section with id 'data'
-            $('#data').hide();
-
+            $('#data').show();
+	    $('.tab-pane').show();	
+	    $('.nav-link[href="#journals"]').click();
+	    $('#journals').show();	
 		
             $('.nav-link[href="#all"]').click();
             // Handle click events on navigation links
@@ -73,11 +75,14 @@
                 var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
                 $('.tab-pane').hide(); // Hide all tab panes
 
-                if (tabId === '#all') {
-		    $('.tab-pane').show();	
+                if (tabId === '#all') {	
+		    $('.nav-link[href="#journals"]').click();	
                     $('#journals').show(); 
+		    $('.nav-link[href="#conferences"]').click();	
 		    $('#conferences').show();
+		    $('.nav-link[href="#posters"]').click();	
 		    $('#posters').show();
+		    $('.nav-link[href="#misc"]').click();	
 		    $('#misc').show();	
                 } else {
                     $(tabId).show(); // Show the selected tab pane
@@ -85,15 +90,15 @@
 
                 // Show the 'data' section
                 $('#data').show();
-                $('#default_info').hide(); // Hide the default info section
+                //$('#default_info').hide(); // Hide the default info section
             });
         });
     </script>	
     <style>
         /* Add specific styles for body tabs to avoid conflict */
-	.tab-pane {
+/* 	.tab-pane {
             display: none;
-        }    
+        }     */
         .body-tabs .nav-link {
             font-size: 18px; /* Corrected the font size declaration */
             color: #007bff;
@@ -186,10 +191,10 @@
                     </div>
                 </div>
                 <hr> 
-		 <div class="section-inner" id="default_info">
+<!-- 		 <div class="section-inner" id="default_info">
 			<p> <strong><span style="color: red;">Copyright Info: </span></strong> All the publications and their contents are protected by copyright law. Unauthorized reproduction, distribution, or use of the material in any form or by any means, electronic or mechanical, including photocopying, recording, or any information storage and retrieval system, without prior written permission from the copyright owner, is prohibited.
  </p>
-                                </div>    
+                                </div>     -->
                 <div class="section-inner" id="data" >
                     <div class="tab-content">
                         <div class="tab-pane fade body-tab-content" id="journals" role="tabpanel">
