@@ -1,38 +1,48 @@
-    <style>
-        /* Add styles for the hamburger menu */
-        .hamburger {
-            display: none;
-            font-size: 30px;
-            cursor: pointer;
-        }
+/* Add styles for the hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
 
-        .navbar-nav {
-            display: flex;
-        }
+.navbar-nav {
+    display: flex;
+    transition: max-height 0.3s ease-in-out;
+}
 
-        .navbar-nav li {
-            margin-right: 15px;
-        }
+.navbar-nav li {
+    margin-right: 15px;
+}
 
-        @media (max-width: 767px) {
-            .navbar-nav {
-                display: none;
-                flex-direction: column;
-            }
+@media (max-width: 767px) {
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-            .navbar-nav li {
-                margin-right: 0;
-            }
+    .navbar-nav li {
+        margin-right: 0;
+        padding: 10px 15px;
+    }
 
-            .hamburger {
-                display: block;
-            }
+    .hamburger {
+        display: block;
+    }
 
-            .navbar-nav.show {
-                display: flex;
-            }
-        }
-    </style>
+    .navbar-nav.show {
+        display: flex;
+        max-height: 500px; /* Set a max-height large enough to show all items */
+    }
+}
+
  <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
