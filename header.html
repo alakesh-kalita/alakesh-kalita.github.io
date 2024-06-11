@@ -1,31 +1,4 @@
-    <style>
-        .hamburger {
-            display: none;
-            font-size: 30px;
-            cursor: pointer;
-        }
 
-        @media (max-width: 767px) {
-            .hamburger {
-                display: block;
-            }
-
-             .navbar-nav {
-                display: none;
-                flex-direction: column;
-                background-color: white; /* Ensure the background matches your site's theme */
-                position: absolute;
-                top: 50px;
-                right: 0;
-                width: 100%;
-                z-index: 1000;
-            } 
-
-            .navbar-nav.show {
-                display: flex;
-            }
-        }
-    </style>
  <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
@@ -78,16 +51,6 @@
         <br>
         <div class="gradient-line"></div>    
     </div><!--//container-->
-<script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            if (menu.classList.contains("show")) {
-                menu.classList.remove("show");
-            } else {
-                menu.classList.add("show");
-            }
-        }
-    </script>
 <!-- <script>
      function toggleMode() {
             document.body.classList.toggle('night-mode'); // Toggle night mode class on body
