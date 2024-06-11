@@ -1,4 +1,38 @@
+    <style>
+        /* Add styles for the hamburger menu */
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
 
+        .navbar-nav {
+            display: flex;
+        }
+
+        .navbar-nav li {
+            margin-right: 15px;
+        }
+
+        @media (max-width: 767px) {
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+            }
+
+            .navbar-nav li {
+                margin-right: 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .navbar-nav.show {
+                display: flex;
+            }
+        }
+    </style>
  <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
@@ -20,7 +54,8 @@
                 <nav class="navbar navbar-static-top" role="navigation">
                     <div class="profile-content pull-right">    
                         <div class="topnav">
-                            <ul class="nav navbar-nav">
+			<span class="hamburger" onclick="toggleMenu()">&#9776;</span>	
+                            <ul class="nav navbar-nav" id="menu">
                                 <li class="active"><a href="index.html" id="current"><i class="fa fa-home"></i> Home</a></li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown">
@@ -50,7 +85,16 @@
         <br>
         <div class="gradient-line"></div>    
     </div><!--//container-->
-
+<script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.classList.contains("show")) {
+                menu.classList.remove("show");
+            } else {
+                menu.classList.add("show");
+            }
+        }
+    </script>
 <!-- <script>
      function toggleMode() {
             document.body.classList.toggle('night-mode'); // Toggle night mode class on body
