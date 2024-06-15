@@ -1,16 +1,10 @@
-<style>
-	.caret-rotate {
-	    transform: rotate(180deg);
-	}
-</style>
-<div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <div class="profile-container">
                     <img class="profile-image img-fluid pull-left" src="assets/images/profile.jpg" alt="Alakesh Kalita" />
                     <div class="profile-content pull-left">
-			<br>    
-                        <h2 class="name">Alakesh Kalita</h2>    
+                        <h2 class="name">Alakesh Kalita</h2>
                         <h3 class="desc">
                             University Lecturer <br>
                             Singapore University of Technology and Design <br>
@@ -21,11 +15,11 @@
             </div><!--//col-->
 
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <nav class="navbar navbar-static-top" role="navigation">
-                   <div class="profile-content pull-right">     
+                <!-- Small Screen Navigation -->
+                <nav class="navbar navbar-static-top d-sm-block d-md-none" role="navigation">
+                    <div class="profile-content pull-right">
                         <div class="topnav">
-			
-                            <ul class="nav navbar-nav" >
+                            <ul class="nav navbar-nav">
                                 <li class="active"><a href="index.html" id="current"><i class="fa fa-home"></i> Home</a></li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown">
@@ -44,23 +38,48 @@
                                         <li><a href="course.html"><i class="fa fa-book"></i> Courses</a></li>
                                         <li><a href="student.html"><i class="fa fa-group"></i> Students</a></li>
                                     </ul>
-                                </li>    
+                                </li>
                                 <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
-                            </ul>	
+                            </ul>
                         </div><!--//topnav-->
-                    </div><!--//profile-content-->    
+                    </div><!--//profile-content-->
+                </nav><!--//navbar-->
+
+                <!-- Large Screen Navigation -->
+                <nav class="navbar navbar-static-top d-none d-md-block" role="navigation">
+                    <div class="profile-content pull-right">
+                        <div class="topnav">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="index.html" id="current"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-search"></i> Research <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="publication.html"><i class="fa fa-file-text"></i> Publications</a></li>
+                                        <li><a href="projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-edit"></i> Teaching <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="course.html"><i class="fa fa-book"></i> Courses</a></li>
+                                        <li><a href="student.html"><i class="fa fa-group"></i> Students</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
+                            </ul>
+                        </div><!--//topnav-->
+                    </div><!--//profile-content-->
                 </nav><!--//navbar-->
             </div><!--//col-->
         </div><!--//row-->
         <br>
-        <div class="gradient-line"></div>    
+        <div class="gradient-line"></div>
     </div><!--//container-->
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-	$(document).ready(function() {
-	    $('.dropdown-toggle').on('click', function() {
-	        $(this).find('.caret').toggleClass('caret-rotate');
-	    });
-	});
-</script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
