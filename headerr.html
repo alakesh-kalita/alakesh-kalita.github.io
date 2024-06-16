@@ -1,31 +1,14 @@
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-<style>
-    .menu-icon {
-        display: none;
-        font-size: 1.5em;
-        cursor: pointer;
-        color: #333;
-        background-color: #D9EAD3;
-    }
-    .nav.navbar-nav {
-            display: none;
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
         }
 
-    @media (min-width: 767px) {
         #check {
-            display: none;
-        }
-    }
-    @media (max-width: 767px) {
-   
-        #check {
-            display: block;
-        }
-        
-    }
-
-      #check {
             display: none;
         }
 
@@ -37,6 +20,7 @@
             cursor: pointer;
             z-index: 1;
             color: #333;
+            display: none; /* Hidden by default */
         }
 
         .sidebar {
@@ -98,115 +82,118 @@
         .active {
             background: #4caf50;
         }
-</style>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
-            <div class="profile-container">
-                <img class="profile-image img-fluid pull-left" src="assets/images/profile.jpg" alt="Alakesh Kalita" />
-                <div class="profile-content pull-left">
-                    <br>    
-                    <h2 class="name">Alakesh Kalita</h2>    
-                    <h3 class="desc">
-                        University Lecturer <br>
-                        Singapore University of Technology and Design <br>
-                        ISTD Pillar, Singapore
-                    </h3>
-                </div><!--//profile-content-->
-            </div><!--//profile-container-->
-        </div><!--//col-->
+        @media (max-width: 767px) {
+            label {
+                display: block; /* Show menu icon on mobile */
+            }
 
-        <div class="col-sm-12 col-md-6 col-lg-6">
-            <nav class="navbar navbar-static-top" role="navigation">
-                <div class="profile-content pull-right">  
-                      
-                    <div class="topnav">
-                        <ul class="nav navbar-nav" id="navigation_bar">
-                            <li class="active"><a href="index.html" id="current"><i class="fa fa-home"></i> Home</a></li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-search"></i> Research <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="publication.html"><i class="fa fa-file-text"></i> Publications</a></li>
-                                    <li><a href="projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-edit"></i> Teaching <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="course.html"><i class="fa fa-book"></i> Courses</a></li>
-                                    <li><a href="student.html"><i class="fa fa-group"></i> Students</a></li>
-                                </ul>
-                            </li>    
-                            <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
-                        </ul>	
-                    </div><!--//topnav-->
-<!--     new style -->
-                  
-            <input type="checkbox" id="check">
-            <label for="check">
-                <i class="fas fa-bars" id="btn"></i>
-                <i class="fas fa-times" id="cancel"></i>
-            </label>
-     
-    <div class="sidebar">
-        <header>Alakesh</header>
-        <a href="#">
-            <i class="fas fa-qrcode"></i>
-            <span>Home</span>
-        </a>
-        <a href="#research">
-            <i class="fa-solid fa-book-open-reader"></i>
-            <span>Research</span>
-        </a>
-        <a href="#experience">
-            <i class="fa-solid fa-briefcase"></i>
-            <span>Experience</span>
-        </a>
-        <a href="#achievements">
-            <i class="fa-solid fa-medal"></i>
-            <span>Achievements</span>
-        </a>
-        <a href="#education">
-            <i class="fa-solid fa-school"></i>
-            <span>Education</span>
-        </a>
-        <a href="#iitg">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span>IITG</span>
-        </a>
-        <a href="#publications">
-            <i class="fa-solid fa-copy"></i>
-            <span>Publications</span>
-        </a>
-        <a href="#other">
-            <i class="fa-solid fa-list"></i>
-            <span>OTHER</span>
-        </a>
-        <a href="#contact">
-            <i class="far fa-envelope"></i>
-            <span>Contact</span>
-        </a>
+            .nav.navbar-nav {
+                display: none; /* Hide navigation bar on mobile */
+            }
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                display: none; /* Hide sidebar on desktop */
+            }
+        }
+    </style>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="profile-container">
+                    <img class="profile-image img-fluid pull-left" src="assets/images/profile.jpg" alt="Alakesh Kalita" />
+                    <div class="profile-content pull-left">
+                        <br>
+                        <h2 class="name">Alakesh Kalita</h2>
+                        <h3 class="desc">
+                            University Lecturer <br>
+                            Singapore University of Technology and Design <br>
+                            ISTD Pillar, Singapore
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <div class="profile-content pull-right">
+                        <div class="topnav">
+                            <ul class="nav navbar-nav" id="navigation_bar">
+                                <li class="active"><a href="index.html" id="current"><i class="fa fa-home"></i> Home</a></li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-search"></i> Research <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="publication.html"><i class="fa fa-file-text"></i> Publications</a></li>
+                                        <li><a href="projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-edit"></i> Teaching <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="course.html"><i class="fa fa-book"></i> Courses</a></li>
+                                        <li><a href="student.html"><i class="fa fa-group"></i> Students</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
+                            </ul>
+                        </div>
+
+                        <input type="checkbox" id="check">
+                        <label for="check">
+                            <i class="fas fa-bars" id="btn"></i>
+                            <i class="fas fa-times" id="cancel"></i>
+                        </label>
+
+                        <div class="sidebar">
+                            <header>Alakesh</header>
+                            <a href="#">
+                                <i class="fas fa-qrcode"></i>
+                                <span>Home</span>
+                            </a>
+                            <a href="#research">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                                <span>Research</span>
+                            </a>
+                            <a href="#experience">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Experience</span>
+                            </a>
+                            <a href="#achievements">
+                                <i class="fa-solid fa-medal"></i>
+                                <span>Achievements</span>
+                            </a>
+                            <a href="#education">
+                                <i class="fa-solid fa-school"></i>
+                                <span>Education</span>
+                            </a>
+                            <a href="#iitg">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>IITG</span>
+                            </a>
+                            <a href="#publications">
+                                <i class="fa-solid fa-copy"></i>
+                                <span>Publications</span>
+                            </a>
+                            <a href="#other">
+                                <i class="fa-solid fa-list"></i>
+                                <span>OTHER</span>
+                            </a>
+                            <a href="#contact">
+                                <i class="far fa-envelope"></i>
+                                <span>Contact</span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <br>
+        <div class="gradient-line"></div>
     </div>
 
-
-
-                    
-                </div><!--//profile-content-->    
-            </nav><!--//navbar-->
-        </div><!--//col-->
-    </div><!--//row-->
-    <br>
-    <div class="gradient-line"></div>    
-</div><!--//container-->
-
-<script>
-    document.getElementById('menu-icon').addEventListener('click', function() {
-        var navLinks = document.getElementById('navigation_bar');
-        navLinks.classList.toggle('open');
-    });
-</script>
