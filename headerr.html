@@ -41,7 +41,7 @@
                    <div class="profile-content pull-right">  
 			<div class="menu-icon" id="menu-icon">&#9776;</div>   
                         <div class="topnav">
-                           <ul class="nav navbar-nav" >
+                           <ul class="nav navbar-nav" id="navigation_bar">
                                 <li class="active"><a href="index.html" id="current"><i class="fa fa-home"></i> Home</a></li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown">
@@ -74,7 +74,7 @@
 
 <script>
     document.getElementById('menu-icon').addEventListener('click', function() {
-        var navLinks = document.getElementById('.nav.navbar-nav');
+        var navLinks = document.getElementById('#navigation_bar');
         navLinks.classList.toggle('open');
     });
 </script>
