@@ -4,18 +4,6 @@
         #check {
             display: none;
         }
-
-        label {
-            position: fixed;
-            top: 15px;
-            left: 15px;
-            font-size: 30px;
-            cursor: pointer;
-            z-index: 1;
-            color: #333;
-            display: none; /* Hidden by default */
-        }
-
         .sidebar {
             position: fixed;
             width: auto;
@@ -58,12 +46,25 @@
             margin-right: 20px;
         }
 
-        #btn {
-            display: block;
+        label #btn, label #cancel {
+            position: absolute;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            border: 1px solid #262626;
+            margin: 15px 30px;
+            font-size: 29px;
+            background: #262626;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            line-height: 45px;
+            transition: all 0.5s ease;
         }
 
-        #cancel {
-            display: none;
+        label #cancel {
+            opacity: 0;
+            visibility: hidden;
         }
 
         #check:checked ~ .sidebar {
@@ -71,11 +72,15 @@
         }
 
         #check:checked ~ label #btn {
-            display: none;
+            margin-left: 245px;
+            opacity: 0;
+            visibility: hidden;
         }
 
         #check:checked ~ label #cancel {
-            display: block;
+            margin-left: 245px;
+            opacity: 1;
+            visibility: visible;
         }
 
         
