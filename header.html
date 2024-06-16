@@ -1,17 +1,44 @@
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
-        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
 
-         .sidebar {
+        .container {
+            padding: 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .profile-content h2,
+        .profile-content h3 {
+            margin: 0;
+        }
+
+        .sidebar {
             position: fixed;
-            width: auto;
-            height: auto;
+            width: 250px;
+            left: -250px;
+            height: 100%;
             background: #fff;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            left: -250px;
             transition: all 0.3s ease;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
+            z-index: 1;
         }
 
         .sidebar header {
@@ -43,11 +70,13 @@
         .sidebar a i {
             margin-right: 20px;
         }
+
         #check {
             display: none;
         }
 
-        label #btn, label #cancel {
+        label #btn,
+        label #cancel {
             position: absolute;
             cursor: pointer;
             color: white;
@@ -70,7 +99,6 @@
 
         #check:checked ~ .sidebar {
             left: 0;
-            display: block;
         }
 
         #check:checked ~ label #btn {
@@ -113,7 +141,6 @@
             }
         }
     </style>
-
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
@@ -172,19 +199,19 @@
                             </a>
                             <a href="publication.html">
                                 <i class="fa fa-file-text"></i>
-                                <span>Publications</span>
+                                <span>Publications</a>
                             </a>
                             <a href="projects.html">
                                 <i class="fa fa-folder-open"></i>
-                                <span>Projects</span>
+                                <span>Projects</a>
                             </a>
                             <a href="course.html">
                                 <i class="fa fa-book"></i>
-                                <span>Courses</span>
+                                <span>Courses</a>
                             </a>
                             <a href="student.html">
                                 <i class="fa fa-group"></i>
-                                <span>Students</span>
+                                <span>Students</a>
                             </a>
                             <a href="contact.html">
                                 <i class="far fa-envelope"></i>
