@@ -1,3 +1,5 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <style>
     .menu-icon {
         display: none;
@@ -25,6 +27,80 @@
             display: block;
         }
     }
+
+      #check {
+            display: none;
+        }
+
+        label {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1;
+            color: #333;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            background: #111;
+            left: -250px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar header {
+            font-size: 22px;
+            color: white;
+            line-height: 70px;
+            text-align: center;
+            background: #222;
+            user-select: none;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background: #575757;
+        }
+
+        .sidebar a i {
+            margin-right: 20px;
+        }
+
+        #btn {
+            display: block;
+        }
+
+        #cancel {
+            display: none;
+        }
+
+        #check:checked ~ .sidebar {
+            left: 0;
+        }
+
+        #check:checked ~ label #btn {
+            display: none;
+        }
+
+        #check:checked ~ label #cancel {
+            display: block;
+        }
+
+        .active {
+            background: #4caf50;
+        }
 </style>
 
 <div class="container">
@@ -72,6 +148,55 @@
                             <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
                         </ul>	
                     </div><!--//topnav-->
+<!--     new style -->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Syam Sankar</header>
+        <a href="#" class="active">
+            <i class="fas fa-qrcode"></i>
+            <span>Home</span>
+        </a>
+        <a href="#research">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <span>Research</span>
+        </a>
+        <a href="#experience">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Experience</span>
+        </a>
+        <a href="#achievements">
+            <i class="fa-solid fa-medal"></i>
+            <span>Achievements</span>
+        </a>
+        <a href="#education">
+            <i class="fa-solid fa-school"></i>
+            <span>Education</span>
+        </a>
+        <a href="#iitg">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>IITG</span>
+        </a>
+        <a href="#publications">
+            <i class="fa-solid fa-copy"></i>
+            <span>Publications</span>
+        </a>
+        <a href="#other">
+            <i class="fa-solid fa-list"></i>
+            <span>OTHER</span>
+        </a>
+        <a href="#contact">
+            <i class="far fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+
+
+                    
                 </div><!--//profile-content-->    
             </nav><!--//navbar-->
         </div><!--//col-->
