@@ -1,5 +1,5 @@
 <style>
-	.menu-icon {
+    .menu-icon {
         display: none;
         font-size: 1.5em;
         cursor: pointer;
@@ -7,7 +7,7 @@
         background-color: #D9EAD3;
     }
 
-   @media (max-width: 767px) {
+    @media (max-width: 767px) {
         .menu-icon {
             display: block;
         }
@@ -16,65 +16,64 @@
             display: flex;
         }
     }	
-</style>	
+</style>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="profile-container">
+                <img class="profile-image img-fluid pull-left" src="assets/images/profile.jpg" alt="Alakesh Kalita" />
+                <div class="profile-content pull-left">
+                    <br>    
+                    <h2 class="name">Alakesh Kalita</h2>    
+                    <h3 class="desc">
+                        University Lecturer <br>
+                        Singapore University of Technology and Design <br>
+                        ISTD Pillar, Singapore
+                    </h3>
+                </div><!--//profile-content-->
+            </div><!--//profile-container-->
+        </div><!--//col-->
 
- <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <div class="profile-container">
-                    <img class="profile-image img-fluid pull-left" src="assets/images/profile.jpg" alt="Alakesh Kalita" />
-                    <div class="profile-content pull-left">
-			<br>    
-                        <h2 class="name">Alakesh Kalita</h2>    
-                        <h3 class="desc">
-                            University Lecturer <br>
-                            Singapore University of Technology and Design <br>
-                            ISTD Pillar, Singapore
-                        </h3>
-                    </div><!--//profile-content-->
-                </div><!--//profile-container-->
-            </div><!--//col-->
-
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <nav class="navbar navbar-static-top" role="navigation">
-                   <div class="profile-content pull-right">  
-			<div class="menu-icon" id="menu-icon">&#9776;</div>   
-                        <div class="topnav">
-                           <ul class="nav navbar-nav" id="navigation_bar">
-                                <li class="active"><a href="index.html" id="current"><i class="fa fa-home"></i> Home</a></li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-search"></i> Research <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="publication.html"><i class="fa fa-file-text"></i> Publications</a></li>
-                                        <li><a href="projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-edit"></i> Teaching <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="course.html"><i class="fa fa-book"></i> Courses</a></li>
-                                        <li><a href="student.html"><i class="fa fa-group"></i> Students</a></li>
-                                    </ul>
-                                </li>    
-                                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
-                            </ul>	
-                        </div><!--//topnav-->
-                    </div><!--//profile-content-->    
-                </nav><!--//navbar-->
-            </div><!--//col-->
-        </div><!--//row-->
-        <br>
-        <div class="gradient-line"></div>    
-    </div><!--//container-->
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <nav class="navbar navbar-static-top" role="navigation">
+                <div class="profile-content pull-right">  
+                    <div class="menu-icon" id="menu-icon">&#9776;</div>   
+                    <div class="topnav">
+                        <ul class="nav navbar-nav" id="navigation_bar">
+                            <li class="active"><a href="index.html" id="current"><i class="fa fa-home"></i> Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-search"></i> Research <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="publication.html"><i class="fa fa-file-text"></i> Publications</a></li>
+                                    <li><a href="projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-edit"></i> Teaching <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="course.html"><i class="fa fa-book"></i> Courses</a></li>
+                                    <li><a href="student.html"><i class="fa fa-group"></i> Students</a></li>
+                                </ul>
+                            </li>    
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
+                        </ul>	
+                    </div><!--//topnav-->
+                </div><!--//profile-content-->    
+            </nav><!--//navbar-->
+        </div><!--//col-->
+    </div><!--//row-->
+    <br>
+    <div class="gradient-line"></div>    
+</div><!--//container-->
 
 <script>
     document.getElementById('menu-icon').addEventListener('click', function() {
-        var navLinks = document.getElementById('#navigation_bar');
+        var navLinks = document.getElementById('navigation_bar');
         navLinks.classList.toggle('open');
     });
 </script>
