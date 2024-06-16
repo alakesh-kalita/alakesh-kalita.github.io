@@ -1,10 +1,144 @@
-    <div class="container">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: #ffffff;
+            width: 100%;
+            display: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            transition: background 0.3s, color 0.3s;
+            border-radius: 8px;
+            white-space: nowrap; /* Prevents text wrapping */
+        }
+
+        .nav-item a:hover {
+            background: #e0e0e0;
+            color: #000;
+        }
+
+        .submenu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: none;
+            background: #f5f5f5;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            position: relative;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            min-width: 200px; /* Set a minimum width for the submenu */
+        }
+
+        .submenu li a {
+            padding-left: 20px;
+        }
+
+        .nav-item:hover .submenu {
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                width: auto;
+            }
+
+            .nav-item {
+                position: relative;
+            }
+
+            .nav-item a {
+                padding: 10px 20px;
+            }
+
+            .submenu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+            }
+
+            .nav-item:hover .submenu {
+                display: block;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+        }
+    </style>
+
+<div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <div class="profile-container">
                     <img class="profile-image img-fluid pull-left" src="assets/images/profile.jpg" alt="Alakesh Kalita" />
                     <div class="profile-content pull-left">
-                        <h2 class="name">Alakesh Kalita</h2>
+			<br>    
+                        <h2 class="name">Alakesh Kalita</h2>    
                         <h3 class="desc">
                             University Lecturer <br>
                             Singapore University of Technology and Design <br>
@@ -14,72 +148,38 @@
                 </div><!--//profile-container-->
             </div><!--//col-->
 
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <!-- Small Screen Navigation -->
-                <nav class="navbar navbar-static-top d-sm-block d-md-none" role="navigation">
-                    <div class="profile-content pull-right">
-                        <div class="topnav">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="index.html" id="current"><i class="fa fa-home"></i> Home</a></li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-search"></i> Research <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="publication.html"><i class="fa fa-file-text"></i> Publications</a></li>
-                                        <li><a href="projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-edit"></i> Teaching <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="course.html"><i class="fa fa-book"></i> Courses</a></li>
-                                        <li><a href="student.html"><i class="fa fa-group"></i> Students</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
-                            </ul>
-                        </div><!--//topnav-->
-                    </div><!--//profile-content-->
-                </nav><!--//navbar-->
-
-                <!-- Large Screen Navigation -->
-                <nav class="navbar navbar-static-top d-none d-md-block" role="navigation">
-                    <div class="profile-content pull-right">
-                        <div class="topnav">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="index.html" id="current"><i class="fa fa-home"></i> Home</a></li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-search"></i> Research <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="publication.html"><i class="fa fa-file-text"></i> Publications</a></li>
-                                        <li><a href="projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-edit"></i> Teaching <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="course.html"><i class="fa fa-book"></i> Courses</a></li>
-                                        <li><a href="student.html"><i class="fa fa-group"></i> Students</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
-                            </ul>
-                        </div><!--//topnav-->
-                    </div><!--//profile-content-->
-                </nav><!--//navbar-->
-            </div><!--//col-->
-        </div><!--//row-->
-        <br>
-        <div class="gradient-line"></div>
-    </div><!--//container-->
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <div class="col-sm-12 col-md-6 col-lg-6">
+    <nav class="navbar">
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+            <li class="nav-item">
+                <a href="index.html"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item">
+                
+                <a <i class="fa fa-search"></i> Research <span class="caret"></span></a>
+                <ul class="submenu">
+                    <li><a href="publication.html"><i class="fa fa-file-text"></i> Publications</a></li>
+                    <li><a href="projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a <i class="fa fa-edit"></i> Teaching <span class="caret"></span></a>
+                <ul class="submenu">
+                    <li><a href="course.html"><i class="fa fa-book"></i> Courses</a></li>
+                    <li><a href="student.html"><i class="fa fa-group"></i> Students</a></li>
+                </ul>
+            </li>
+             <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
+        </ul>
+    </nav>
+</div><!--//row-->
+            <br>
+<div class="gradient-line"></div>    
+</div><!--//container-->     
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('open');
+        });
+    </script>
