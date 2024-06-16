@@ -20,18 +20,22 @@
             position: fixed;
             width: 250px;
             height: 100%;
-            background: #111;
+            background: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
             left: -250px;
             transition: all 0.3s ease;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
 
         .sidebar header {
             font-size: 22px;
-            color: white;
+            color: #333;
             line-height: 70px;
             text-align: center;
-            background: #222;
+            background: #e0e0e0;
             user-select: none;
+            border-top-right-radius: 10px;
         }
 
         .sidebar a {
@@ -39,13 +43,15 @@
             align-items: center;
             padding: 15px 30px;
             font-size: 18px;
-            color: white;
+            color: #333;
             text-decoration: none;
             transition: all 0.3s ease;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .sidebar a:hover {
-            background: #575757;
+            background: #f0f0f0;
+            border-bottom: 1px solid #d0d0d0;
         }
 
         .sidebar a i {
