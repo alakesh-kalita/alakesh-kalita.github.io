@@ -15,7 +15,7 @@
             z-index: 1;
             color: #333;
             display: none; /* Hidden by default */
-            font-size: 18px;
+            font-size: 30px;
             font-weight: bold;
             cursor: pointer;
         }
@@ -27,7 +27,7 @@
             height: auto;
             background: #fff;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            left: -250px;
+            right: -250px;
             transition: all 0.3s ease;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -72,12 +72,12 @@
         }
 
         #check:checked ~ .sidebar {
-            left: 0;
+            right: 0;
         }
 
-        #check:checked ~ label {
+/*         #check:checked ~ label {
             left: 255px;
-        }
+        } */
 
         #check:checked ~ label #btn {
             display: none;
