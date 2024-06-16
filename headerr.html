@@ -12,7 +12,12 @@
         #navigation_bar {
             display: none;
         }
-    
+    @media only (min-width: 768px)  {
+            #navigation_bar {
+                display: block;
+            }
+				            
+		}
 
     @media (max-width: 767px) {
         .menu-icon {
@@ -21,11 +26,6 @@
 
         .nav.navbar-nav.open {
             display: flex;
-        }
-
-        /* Show #navigation_bar when .open class is applied */
-        .nav.navbar-nav.open #navigation_bar {
-            display: block;
         }
     }
 </style>
