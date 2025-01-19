@@ -63,6 +63,12 @@
         table tbody tr:nth-child(odd) {
             background-color: #ffffff; /* White background for alternating rows */
         }
+	
+	    .photo div {
+	        margin-top: 5px; /* Space between the image and name */
+	        font-weight: bold;
+	        text-align: center; /* Center-align the name below the photo */
+	    }
     </style>
 
 
@@ -109,7 +115,6 @@
                             <table class="table table-striped table-sm">
                                 <thead>
                                     <tr>
-                                        <th>Photo</th>
                                         <th>Student Name</th>
                                         <th>Institute</th>
                                         <th>Enrollment Date</th>
@@ -118,21 +123,25 @@
                                 </thead>
                                 <tbody>
 				    <tr>
-                                        <td class="photo"><img src="assets/images/you.png" alt="You"></td>
-                                        <td> You !!!</td>
-                                        <td>IIT (ISM) Dhanbad</td>
-                                        <td>2025</td>
-                                        <td>AI for Computer Systems</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="photo"><img src="assets/images/students/poorvi.jpeg" alt="Poorvi"></td>
-                                        <td>Joshi Poorvi (Mentoring)</td>
-                                        <td>National University of Sinagpore, Singapore</td>
-                                        <td>January, 2025 </td>
-                                        <td> Role of Generative AI in Computer Networks</td>
-                                    </tr>
-                                    
-                                </tbody>
+				        <td class="photo">
+				            <img src="assets/images/you.png" alt="You">
+				            <div>You !!!</div>
+				        </td>
+				        <td>IIT (ISM) Dhanbad</td>
+				        <td>2025</td>
+				        <td>AI for Computer Systems</td>
+				    </tr>
+				    <tr>
+				        <td class="photo">
+				            <img src="assets/images/students/poorvi.jpeg" alt="Poorvi">
+				            <div>Joshi Poorvi (Mentoring)</div>
+				        </td>
+				        <td>National University of Sinagpore, Singapore</td>
+				        <td>January, 2025</td>
+				        <td>Role of Generative AI in Computer Networks</td>
+				    </tr>
+				</tbody>
+
                             </table>
                         </div>
                     </div>
