@@ -20,7 +20,7 @@
     
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    <style>
+        <style>
         table {
             border-collapse: collapse;
             width: 100%;
@@ -43,7 +43,34 @@
         .photo {
             text-align: center;
         }
+        /* Colors for Headings */
+        h2.heading {
+            color: #5CB85C; /* Lighter green */
+            font-weight: bold;
+            border-bottom: 3px solid #4CAE4C; /* Slightly darker green for accent */
+            padding-bottom: 8px;
+        }
+        h3 {
+            color: #42A5F5; /* Lighter blue */
+            font-weight: bold;
+            border-bottom: 2px solid #2196F3; /* Medium blue for separation */
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+        }
+        /* Updated Table Header Styles */
+        table thead th {
+            background-color: #336699; /* Medium-light blue */
+            color: #ffffff; /* White text for contrast */
+            font-weight: bold;
+        }
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9; /* Subtle light background for better readability */
+        }
+        table tbody tr:nth-child(odd) {
+            background-color: #ffffff; /* White background for alternating rows */
+        }
     </style>
+
 
             <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
             <script src="jquery.js"></script> 
