@@ -39,23 +39,24 @@
     </script>
 
      <script>
-	    $(document).ready(function() {	
-	        $('.tab-pane').hide(); // Hide all tab panes initially
-	        $('#about').show(); // Show only the About tab by default
-	
-	        $('.nav-link').click(function(e) {
-	            e.preventDefault(); // Prevent default link behavior
-	
-	            var tabId = $(this).attr('href'); // Get target tab ID
-	            $('.tab-pane').hide(); // Hide all tabs
-	            $(tabId).fadeIn(); // Show selected tab with a fade effect
-	
-	            // Remove "active" class from all tabs, add to the clicked one
-	            $('.nav-link').removeClass('active');
-	            $(this).addClass('active');
-	        });
-	    });
+    $(document).ready(function() {	
+        $('.tab-pane').css('display', 'none'); // Hide all tab panes initially
+        $('#about').css('display', 'block'); // Show only the About tab by default
+
+        $('.nav-link').click(function(e) {
+            e.preventDefault(); // Prevent default link behavior
+
+            var tabId = $(this).attr('href'); // Get target tab ID
+            $('.tab-pane').css('display', 'none'); // Hide all tabs
+            $(tabId).css('display', 'block'); // Show selected tab properly
+
+            // Remove "active" class from all tabs, add to the clicked one
+            $('.nav-link').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
 	</script>
+
 
 	<style>
         .body-tabs .nav-link {
