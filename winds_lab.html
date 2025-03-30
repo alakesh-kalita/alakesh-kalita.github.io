@@ -38,24 +38,33 @@
         });
     </script>
 
-     <script>
-    $(document).ready(function() {	
-        $('.tab-pane').css('display', 'none'); // Hide all tab panes initially
-        $('#about').css('display', 'block'); // Show only the About tab by default
+    <script>
+        $(document).ready(function() {	
+	    $('.nav-link[href="#about"]').click();
+	    $('.tab-pane').hide(); // Hide all tab panes	
+	    $('#about').show();	
+		
+            $('.nav-link').click(function(e) {
+                e.preventDefault(); // Prevent the default action of the link
 
-        $('.nav-link').click(function(e) {
-            e.preventDefault(); // Prevent default link behavior
+                var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
+                $('.tab-pane').hide(); // Hide all tab panes
 
-            var tabId = $(this).attr('href'); // Get target tab ID
-            $('.tab-pane').css('display', 'none'); // Hide all tabs
-            $(tabId).css('display', 'block'); // Show selected tab properly
-
-            // Remove "active" class from all tabs, add to the clicked one
-            $('.nav-link').removeClass('active');
-            $(this).addClass('active');
+                if (tabId === '#all') {	
+		    $('.nav-link[href="#about"]').click();
+		    $('.nav-link[href="#members"]').click();
+		    $('.nav-link[href="#pubs"]').click();	
+		    $('.nav-link[href="#funds"]').click();
+		    $('#about').show();
+                    $('#memebers').show(); 
+		    $('#pubs').show();
+		    $('#funds').show();	
+                } else {
+                    $(tabId).show(); // Show the selected tab pane
+                }
+            });
         });
-    });
-	</script>
+    </script>	
 
 
 	<style>
@@ -142,7 +151,10 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#funds" role="tab">Research Grants</a>
-                            </li>		
+                            </li>
+			                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#all" role="tab">All</a>
+                            </li>	
                         </ul>
                     </div>
                 </div>
