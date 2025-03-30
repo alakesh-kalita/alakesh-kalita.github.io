@@ -38,7 +38,7 @@
         });
     </script>
 
-    <script>
+<!--     <script>
         $(document).ready(function() {	
 	    $('.nav-link[href="#journals"]').click();
 	    $('.tab-pane').hide(); // Hide all tab panes	
@@ -68,7 +68,7 @@
                 }
             });
         });
-    </script>	
+    </script>	 -->
     <style>
 
         .body-tabs .nav-link {
@@ -144,31 +144,72 @@
                     <div class="col">
                         <ul class="nav nav-tabs body-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#about" role="tab">About</a>
+                                <a class="nav-link active" data-toggle="tab" href="#about" role="tab">About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#members" role="tab">Members</a>
                             </li>
-	                      <li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#pubs" role="tab">Publications</a>
-                            </li> 
-			    <li class="nav-item">
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#funds" role="tab">Research Grants</a>
                             </li>		
                         </ul>
                     </div>
                 </div>
+
                 <hr> 
-<!-- 		 <div class="section-inner" id="default_info">
-			<p> <strong><span style="color: red;">Copyright Info: </span></strong> All the publications and their contents are protected by copyright law. Unauthorized reproduction, distribution, or use of the material in any form or by any means, electronic or mechanical, including photocopying, recording, or any information storage and retrieval system, without prior written permission from the copyright owner, is prohibited.
- </p>
-                                </div>     -->
-                <div class="section-inner" id="data" >
+                
+                <div class="section-inner" id="data">
                     <div class="tab-content">
-                        <div class="tab-pane fade body-tab-content" id="journals" role="tabpanel">
+                        <!-- About Tab Content -->
+                        <div class="tab-pane fade show active body-tab-content" id="about" role="tabpanel">
                             <div class="row">
                                 <div class="col">
-                                   
+                                    <h2>About the Lab</h2>
+                                    <p>Welcome to the Wireless Networks and Distributed Systems Lab. Our lab focuses on cutting-edge research in wireless communication, IoT, and distributed computing.</p>
+                                    <p>Our research areas include:</p>
+                                    <ul>
+                                        <li>6TiSCH and LoRaWAN networks</li>
+                                        <li>Edge and Cloud computing</li>
+                                        <li>Task offloading and scheduling</li>
+                                        <li>AI/ML applications in network optimization</li>
+                                    </ul>
+                                    <p>We collaborate with leading researchers and industries to develop innovative solutions for real-world problems.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Tab Content (Placeholder) -->
+                        <div class="tab-pane fade body-tab-content" id="members" role="tabpanel">
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Lab Members</h2>
+                                    <p>Details about faculty, researchers, and students.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade body-tab-content" id="pubs" role="tabpanel">
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Publications</h2>
+                                    <p>List of research papers and conference proceedings.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade body-tab-content" id="funds" role="tabpanel">
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Research Grants</h2>
+                                    <p>Information about funded projects and grants received.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
