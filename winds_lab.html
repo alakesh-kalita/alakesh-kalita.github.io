@@ -39,28 +39,24 @@
     </script>
 
      <script>
-        $(document).ready(function() {	
-	   $('.nav-link[href="#about"]').click();
-	    $('.tab-pane').hide(); // Hide all tab panes	
-	    $('#about').show();	
-		
-            $('.nav-link').click(function(e) {
-                e.preventDefault(); // Prevent the default action of the link
+	    $(document).ready(function() {	
+	        $('.tab-pane').hide(); // Hide all tab panes initially
+	        $('#about').show(); // Show only the About tab by default
+	
+	        $('.nav-link').click(function(e) {
+	            e.preventDefault(); // Prevent default link behavior
+	
+	            var tabId = $(this).attr('href'); // Get target tab ID
+	            $('.tab-pane').hide(); // Hide all tabs
+	            $(tabId).fadeIn(); // Show selected tab with a fade effect
+	
+	            // Remove "active" class from all tabs, add to the clicked one
+	            $('.nav-link').removeClass('active');
+	            $(this).addClass('active');
+	        });
+	    });
+	</script>
 
-                var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
-                $('.tab-pane').hide(); // Hide all tab panes
-
-                if (tabId === '#about') {	
-		    $('.nav-link[href="#about"]').click();
-		    $('#about').show();
-                } else {
-		     $('#about').hide();
-                    $(tabId).show(); // Show the selected tab pane
-                }
-            });
-        });
-    </script>	
-    <style>
 
         .body-tabs .nav-link {
             font-size: 18px; /* Corrected the font size declaration */
