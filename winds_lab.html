@@ -49,8 +49,15 @@
 
                 var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
                 $('.tab-pane').hide(); // Hide all tab panes
-		$(tabId).show();
-           });
+
+                if (tabId === '#about') {	
+		    $('.nav-link[href="#about"]').click();
+		    $('#about').show();
+                } else {
+		     $('#about').hide();
+                    $(tabId).show(); // Show the selected tab pane
+                }
+            });
         });
     </script>	
     <style>
