@@ -40,9 +40,9 @@
 
     <script>
         $(document).ready(function() {	
-	    $('.nav-link[href="#journals"]').click();
+	    $('.nav-link[href="#about"]').click();
 	    $('.tab-pane').hide(); // Hide all tab panes	
-	    $('#journals').show();	
+	    $('#about').show();	
 		
             $('.nav-link').click(function(e) {
                 e.preventDefault(); // Prevent the default action of the link
@@ -51,16 +51,16 @@
                 $('.tab-pane').hide(); // Hide all tab panes
 
                 if (tabId === '#all') {	
-		    $('.nav-link[href="#journals"]').click();
-		    $('.nav-link[href="#conferences"]').click();
-		    $('.nav-link[href="#posters"]').click();	
-		    $('.nav-link[href="#misc"]').click();
+		    $('.nav-link[href="#about"]').click();
+		    $('.nav-link[href="#mem"]').click();
+		    $('.nav-link[href="#pubs"]').click();	
+		    $('.nav-link[href="#funds"]').click();
 		    $('.nav-link[href="#patents"]').click();
 		    $('.nav-link[href="#book_chs"]').click();
-		    $('#patents').show();
-                    $('#journals').show(); 
-		    $('#conferences').show();
-		    $('#book_chs').show();	
+		    $('#about').show();
+                    $('#mem').show(); 
+		    $('#pubs').show();
+		    $('#funds').show();	
 		    $('#posters').show();
 		    $('#misc').show();	
                 } else {
@@ -144,26 +144,23 @@
                     <div class="col">
                         <ul class="nav nav-tabs body-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#journals" role="tab">Journals</a>
+                                <a class="nav-link" data-toggle="tab" href="#about" role="tab">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#conferences" role="tab">Conferences</a>
+                                <a class="nav-link" data-toggle="tab" href="#mem" role="tab">Members</a>
                             </li>
+			    <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#pubs" role="tab">Publications</a>
+                            </li>	
+			    <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#funds" role="tab">Research Grants</a>
+                            </li>	
 <!--                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#technicalReports" role="tab">Technical Reports</a>
-                            </li> -->
-			    <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#patents" role="tab">Patents</a>
-                            </li>	
-			    <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#book_chs" role="tab">Book Chapters</a>
-                            </li>	
-                            <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#posters" role="tab">Preprint</a>
                             </li>
 			    <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#misc" role="tab">Miscellaneous</a>
-                            </li>
+                            </li> -->
 			    <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#all" role="tab">All</a>
                             </li>	
