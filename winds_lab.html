@@ -36,28 +36,26 @@
 
     <script>
         $(document).ready(function() {	
-            $('.nav-link[href="#about"]').click();
-            $('.tab-pane').hide(); // Hide all tab panes	
-            $('#about').show();	
+            // Initialize - show About tab only
+            $('.tab-pane').hide();
+            $('#about').show();
+            $('.nav-link').removeClass('active');
+            $('.nav-link[href="#about"]').addClass('active');
             
+            // Tab click handler
             $('.nav-link').click(function(e) {
-                e.preventDefault(); // Prevent the default action of the link
-
-                var tabId = $(this).attr('href'); // Get the href attribute value, which is the tab pane id
-                $('.tab-pane').hide(); // Hide all tab panes
-
-                if (tabId === '#all') {	
-                    $('.nav-link[href="#about"]').click();
-                    $('.nav-link[href="#mem"]').click();
-                    $('.nav-link[href="#pubs"]').click();	
-                    $('.nav-link[href="#funds"]').click();
-                    $('#about').show();
-                    $('#mem').show(); 
-                    $('#pubs').show();
-                    $('#funds').show();		
-                } else {
-                    $(tabId).show(); // Show the selected tab pane
-                }
+                e.preventDefault();
+                
+                // Remove active class from all tabs
+                $('.nav-link').removeClass('active');
+                $('.tab-pane').hide();
+                
+                // Add active class to clicked tab
+                $(this).addClass('active');
+                
+                // Get the target tab
+                var tabId = $(this).attr('href');
+                $(tabId).show();
             });
         });
     </script>	
@@ -80,6 +78,7 @@
             transition: all 0.3s ease;
             background-color: #f0f0f0;
             border: 2px solid transparent;
+            cursor: pointer;
         }
 
         .body-tabs .nav-link:hover {
@@ -99,6 +98,11 @@
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .body-tab-content.active {
+            display: block;
         }
 
         .body-tab-content h4 {
@@ -424,16 +428,16 @@
                         <div class="col">
                             <ul class="nav nav-tabs body-tabs" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#about" role="tab">About</a>
+                                    <a class="nav-link active" href="#about" role="tab">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#mem" role="tab">Members</a>
+                                    <a class="nav-link" href="#mem" role="tab">Members</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#pubs" role="tab">Publications</a>
+                                    <a class="nav-link" href="#pubs" role="tab">Publications</a>
                                 </li>	
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#funds" role="tab">Research Grants</a>
+                                    <a class="nav-link" href="#funds" role="tab">Research Grants</a>
                                 </li>		
                             </ul>
                         </div>
