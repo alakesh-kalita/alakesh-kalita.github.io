@@ -1,64 +1,64 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
     <title>WiNDS Lab - Wireless Networks and Distributed Systems</title>
+
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="WiNDS Lab - Wireless Networks and Distributed Systems at IIT (ISM) Dhanbad. Focused on IoT, distributed systems, and AI/ML technologies.">
-    <meta name="author" content="Dr. Alakesh Kalita">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <meta name="author" content="Dr. Alakesh Kalita">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-    <!-- Theme CSS -->  
+
+    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- HTML5 shim and Respond.js IE8 support -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="jquery.js"></script> 
+
     <script>
-        $(function(){
+        $(function () {
             $("#includedMyInfo").load("winds_header.html");
             $("#includedMyFooter").load("footer.html");
+
+            // Show About tab by default
+            $(".body-tab-content").hide().removeClass("active");
+            $("#about").show().addClass("active");
+
+            $(".body-tabs .nav-link").removeClass("active");
+            $('.body-tabs .nav-link[href="#about"]').addClass("active");
+
+            // Manual tab switching
+            $(".body-tabs .nav-link").on("click", function (e) {
+                e.preventDefault();
+
+                var tabId = $(this).attr("href");
+
+                $(".body-tabs .nav-link").removeClass("active");
+                $(this).addClass("active");
+
+                $(".body-tab-content").hide().removeClass("active");
+                $(tabId).show().addClass("active");
+            });
         });
     </script>
 
-    <script>
-        $(document).ready(function() {	
-            // Initialize - show About tab only
-            $('.tab-pane').hide();
-            $('#about').show();
-            $('.nav-link').removeClass('active');
-            $('.nav-link[href="#about"]').addClass('active');
-            
-            // Tab click handler
-            $('.nav-link').click(function(e) {
-                e.preventDefault();
-                
-                // Remove active class from all tabs
-                $('.nav-link').removeClass('active');
-                $('.tab-pane').hide();
-                
-                // Add active class to clicked tab
-                $(this).addClass('active');
-                
-                // Get the target tab
-                var tabId = $(this).attr('href');
-                $(tabId).show();
-            });
-        });
-    </script>	
     <style>
         /* Enhanced Tab Styling */
         .body-tabs {
@@ -79,11 +79,14 @@
             background-color: #f0f0f0;
             border: 2px solid transparent;
             cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .body-tabs .nav-link:hover {
             background-color: #e0e0e0;
             color: #007bff;
+            text-decoration: none;
         }
 
         .body-tabs .nav-link.active {
@@ -99,15 +102,17 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             display: none;
+            opacity: 1 !important;
         }
 
         .body-tab-content.active {
             display: block;
+            opacity: 1 !important;
         }
 
         .body-tab-content h4 {
             margin-bottom: 20px;
-            color: #1a73e8;	
+            color: #1a73e8;
             font-size: 22px;
             font-weight: bold;
             border-left: 4px solid #1a73e8;
@@ -121,8 +126,8 @@
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
-            margin-top: 15px;	
-        }    
+            margin-top: 15px;
+        }
 
         .info p {
             margin: 8px 0;
@@ -143,7 +148,8 @@
             font-weight: 600;
         }
 
-        .info pre, .info code {
+        .info pre,
+        .info code {
             margin: 0;
             padding: 10px;
             border: none;
@@ -171,7 +177,8 @@
             background-color: #fff;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 12px;
             text-align: left;
@@ -234,14 +241,38 @@
             margin-bottom: 8px;
             border-radius: 20px;
             font-weight: 600;
+            display: inline-block;
         }
 
-        .bg-primary { background-color: #007bff !important; color: white; }
-        .bg-secondary { background-color: #6c757d !important; color: white; }
-        .bg-success { background-color: #28a745 !important; color: white; }
-        .bg-danger { background-color: #dc3545 !important; color: white; }
-        .bg-info { background-color: #17a2b8 !important; color: white; }
-        .bg-warning { background-color: #ffc107 !important; color: #333; }
+        .bg-primary {
+            background-color: #007bff !important;
+            color: white;
+        }
+
+        .bg-secondary {
+            background-color: #6c757d !important;
+            color: white;
+        }
+
+        .bg-success {
+            background-color: #28a745 !important;
+            color: white;
+        }
+
+        .bg-danger {
+            background-color: #dc3545 !important;
+            color: white;
+        }
+
+        .bg-info {
+            background-color: #17a2b8 !important;
+            color: white;
+        }
+
+        .bg-warning {
+            background-color: #ffc107 !important;
+            color: #333;
+        }
 
         /* Research Areas */
         .research-areas {
@@ -411,7 +442,6 @@
             }
         }
     </style>
-
 </head>
 
 <body>
@@ -447,7 +477,7 @@
                     <div class="section-inner" id="data">
                         <div class="tab-content">
                             <!-- ========== ABOUT TAB ========== -->
-                            <div class="tab-pane fade show active body-tab-content" id="about" role="tabpanel">
+                            <div class="tab-pane body-tab-content active" id="about" role="tabpanel">
                                 <div class="index-container">
                                     <div class="row">
                                         <div class="col-md-8">
