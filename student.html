@@ -302,15 +302,15 @@
                     <!-- Statistics -->
                     <div class="stats-container">
                         <div class="stat-box">
-                            <div class="stat-number">5</div>
+                            <div class="stat-number" id="phdCount">5</div>
                             <div class="stat-label">PhD Students</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-number">6</div>
+                            <div class="stat-number" id="mastersCount">6</div>
                             <div class="stat-label">Masters Students</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-number">1</div>
+                            <div class="stat-number" id="fellowshipCount">1</div>
                             <div class="stat-label">Fellowship</div>
                         </div>
                     </div>
@@ -319,7 +319,7 @@
                     <h3>PhD Students</h3>
                     <div class="table-container">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table" id="phdTable">
                                 <thead>
                                     <tr>
                                         <th style="width: 100px;">Photo</th>
@@ -378,7 +378,7 @@
                     <h3>Masters Students</h3>
                     <div class="table-container">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table" id="mastersTable">
                                 <thead>
                                     <tr>
                                         <th style="width: 100px;">Photo</th>
@@ -459,7 +459,24 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     <script type="text/javascript" src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
     <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>            
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+    <!-- Auto-calculate Statistics -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Calculate PhD Students count
+            var phdRows = document.querySelectorAll('#phdTable tbody tr').length;
+            document.getElementById('phdCount').textContent = phdRows;
+            
+            // Calculate Masters Students count
+            var mastersRows = document.querySelectorAll('#mastersTable tbody tr').length;
+            document.getElementById('mastersCount').textContent = mastersRows;
+            
+            // Calculate Fellowship count (count fellowship badges)
+            var fellowshipCount = document.querySelectorAll('.fellowship-badge').length;
+            document.getElementById('fellowshipCount').textContent = fellowshipCount;
+        });
+    </script>            
 </body>
 
 </html>
