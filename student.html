@@ -21,64 +21,129 @@
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
         <style>
+        /* Table Styling */
         table {
             border-collapse: collapse;
             width: 100%;
             margin-bottom: 20px;
+            background-color: #fff;
         }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
             text-align: left;
-	    vertical-align: middle; 
+            vertical-align: middle;
         }
+
+        th {
+            background-color: #336699;
+            color: white;
+            font-weight: bold;
+        }
+
         tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: #f9f9f9;
         }
-/*         img {
-            width: 80px; 
-            height: 100px;
-            object-fit: cover;
-            border-radius: 5px;
-        } */
+
+        tr:hover {
+            background-color: #f0f0f0;
+            transition: background-color 0.2s ease;
+        }
+
         .Xphoto {
             text-align: center;
         }
 
-	.Xphoto img {
-		    width: 80px; /* Passport-size dimensions */
-		    height: 100px;
-		    object-fit: cover;
-		    border-radius: 5px;
-		}
-        /* Colors for Headings */
-        
+        .Xphoto img {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            transition: transform 0.3s ease;
+        }
+
+        .Xphoto img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
         h3 {
-            color: #42A5F5; /* Lighter blue */
+            color: #1a73e8;
             font-weight: bold;
-            margin-bottom: 12px;
-            padding-bottom: 5px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #1a73e8;
         }
-        /* Updated Table Header Styles */
-        table thead th {
-            background-color: #336699; /* Medium-light blue */
-            color: #ffffff; /* White text for contrast */
+
+        .Xphoto div {
+            margin-top: 8px;
+            font-weight: 500;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Badge Styling */
+        .badge {
+            font-size: 12px;
+            padding: 6px 12px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .bg-primary {
+            background-color: #007bff !important;
+            color: white;
+        }
+
+        .bg-secondary {
+            background-color: #6c757d !important;
+            color: white;
+        }
+
+        .bg-success {
+            background-color: #28a745 !important;
+            color: white;
+        }
+
+        .bg-danger {
+            background-color: #dc3545 !important;
+            color: white;
+        }
+
+        .bg-info {
+            background-color: #17a2b8 !important;
+            color: white;
+        }
+
+        /* Fellowship Badge */
+        .fellowship-badge {
+            color: #1a73e8;
             font-weight: bold;
+            background-color: #e8f4f8;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
         }
-        table tbody tr:nth-child(even) {
-            background-color: #f9f9f9; /* Subtle light background for better readability */
-	    vertical-align: middle; 
+
+        /* Media Query for Mobile */
+        @media (max-width: 768px) {
+            .Xphoto img {
+                width: 70px;
+                height: 90px;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                font-size: 13px;
+            }
         }
-        table tbody tr:nth-child(odd) {
-            background-color: #ffffff; /* White background for alternating rows */
-	    vertical-align: middle; 
-        }
-	
-	    .Xphoto div {
-	        margin-top: 5px; /* Space between the image and name */
-	        font-weight: bold;
-	        text-align: center; /* Center-align the name below the photo */
-	    }
     </style>
 
 
@@ -122,7 +187,7 @@
                     <h3>PhD Students</h3>
                     <div class="content">
                         <div class="table-responsive">
-                            <table class="table table-striped table-sm">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
 					<th>Photo</th>
@@ -135,7 +200,7 @@
                                  <tbody>
 				   <tr>
                                         <td class="Xphoto"><img src="assets/images/you.png" alt="You"></td>
-                                        <td> You !!!</td>
+                                        <td><strong>You !!!</strong></td>
                                         <td>-</td>
                                         <td>-</td>
                                         <td>AI/ML for Computer Systems</td>
@@ -145,15 +210,15 @@
 									 
 								   <tr>
                                    <td class="Xphoto"><img src="assets/images/male.png" alt="Saket"></td>
-                                        <td> Saket Tudu</td>
+                                        <td><strong>Saket Tudu</strong></td>
                                         <td>IIT (ISM) Dhanbad</td>
                                         <td>February 2026</td>
-                                        <td>Improving performance of RPL Routing Protocol for LLNs </td>
+                                        <td>Improving performance of RPL Routing Protocol for LLNs</td>
                                     </tr>	
 
 								 <tr>
                                    <td class="Xphoto"><img src="assets/images/female.png" alt="Anindita"></td>
-                                        <td> Anindita Sarkar </td>
+                                        <td><strong>Anindita Sarkar</strong></td>
                                         <td>IIT (ISM) Dhanbad</td>
                                         <td>February 2026</td>
                                         <td>Adaptive Cell Scheduling in 6TiSCH Networks</td>
@@ -161,25 +226,18 @@
 									 
 				   				   <tr>
                                    <td class="Xphoto"><img src="assets/images/students/Ashish.jpg" alt="Ashish"></td>
-                                        <td> Ashish Singh</td>
+                                        <td><strong>Ashish Singh</strong></td>
                                         <td>IIT (ISM) Dhanbad</td>
                                         <td>July 2025</td>
                                         <td>Improving the performance of DSME Networks</td>
                                     </tr>	 
 				   <tr>
-                                        <td class="Xphoto"><img src="assets/images/students/Rakesh.png" alt="You"></td>
-                                        <td>Rakesh Pradhan</td>
-                                        <td>IIT (ISM) Dhanbad (<span style="color: #1a73e8; font-weight: bold;">Received IndiaAI PhD Fellowship</span>)</td>
+                                        <td class="Xphoto"><img src="assets/images/students/Rakesh.png" alt="Rakesh"></td>
+                                        <td><strong>Rakesh Pradhan</strong></td>
+                                        <td>IIT (ISM) Dhanbad</td>
                                         <td>April 2025</td>
-                                        <td>AI/ML for Computer Systems</td>
+                                        <td>AI/ML for Computer Systems<br><span class="fellowship-badge">🏆 IndiaAI PhD Fellowship</span></td>
                                     </tr>	 
-<!--                                     <tr>
-                                        <td class="Xphoto"><img src="assets/images/students/poorvi.jpeg" alt="Poorvi"></td>
-                                        <td>Joshi Poorvi (Mentoring)</td>
-                                        <td>National University of Sinagpore, Singapore</td>
-                                        <td>January, 2025 </td>
-                                        <td> Role of Generative AI in Computer Networks</td>
-                                    </tr> -->
                                     
                                 </tbody>
 
@@ -188,58 +246,58 @@
                     </div>
 
                     <!-- Master's Students Section -->
-                    <h3>Master's Students</h3>
+                    <h3 style="margin-top: 30px;">Masters Students</h3>
                     <div class="content">
                         <div class="table-responsive">
-                            <table class="table table-striped table-sm">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>Photo</th>
                                         <th>Student Name</th>
                                         <th>Institute</th>
-                                        <th>Year</th>
-                                        <th>Outcome</th>
+                                        <th>Timeline</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
-                                <body>
+                                <tbody>
 				<tr>
-                                        <td class="Xphoto"><img src="assets/images/students/Aman.jpeg" alt="Aman"></td>
-                                        <td>Aman Shaw</td>
+                                        <td class="Xphoto"><img src="assets/images/students/Aman.jpeg" alt="Aman Shaw"></td>
+                                        <td><strong>Aman Shaw</strong></td>
                                         <td>IIT (ISM) Dhanbad</td>
                                         <td>2024-2026</td>
-                                        <td>Ongoing</td>
+                                        <td><span class="badge bg-success">Ongoing</span></td>
                                 </tr>
 				<tr>
-                                        <td class="Xphoto"><img src="assets/images/students/Punam.jpeg" alt="Punam"></td>
-                                        <td>Punam Khilari</td>
+                                        <td class="Xphoto"><img src="assets/images/students/Punam.jpeg" alt="Punam Khilari"></td>
+                                        <td><strong>Punam Khilari</strong></td>
                                         <td>IIT (ISM) Dhanbad</td>
                                         <td>2024-2026</td>
-                                        <td>Ongoing</td>
+                                        <td><span class="badge bg-success">Ongoing</span></td>
                                 </tr>
                                     <tr>
                                         <td class="Xphoto"><img src="assets/images/students/Jiang.jpeg" alt="Jiang Jiaxu"></td>
-                                        <td>Jiang Jiaxu</td>
+                                        <td><strong>Jiang Jiaxu</strong></td>
                                         <td>National University of Singapore, Singapore</td>
                                         <td>2024-2026</td>
                                         <td>IEEE WCNC 2026, Ongoing</td>
                                     </tr>
                                     <tr>
-                                        <td class="Xphoto"><img src="assets/images/students/poorvi.jpeg" alt="Jiang Jiaxu"></td>
-                                        <td>Joshi Poorvi</td>
+                                        <td class="Xphoto"><img src="assets/images/students/poorvi.jpeg" alt="Joshi Poorvi"></td>
+                                        <td><strong>Joshi Poorvi</strong></td>
                                         <td>National University of Singapore, Singapore</td>
                                         <td>2023-2024</td>
                                         <td>IEEE VTC 2024, IEEE Commun. Surv. Tutor. (IF: 34.1)</td>
                                     </tr>
                                     <tr>
                                         <td class="Xphoto"><img src="assets/images/female.png" alt="Wu Xiaoke"></td>
-                                        <td>Wu Xiaoke</td>
+                                        <td><strong>Wu Xiaoke</strong></td>
                                         <td>National University of Singapore, Singapore</td>
                                         <td>2023-2024</td>
                                         <td>IEEE TNSM (Subm.)</td>
                                     </tr>
                                     <tr>
                                         <td class="Xphoto"><img src="assets/images/students/valencia.jpeg" alt="Valencia Sebastiani"></td>
-                                        <td>Valencia Sebastiani</td>
+                                        <td><strong>Valencia Sebastiani</strong></td>
                                         <td>National University of Singapore, Singapore</td>
                                         <td>2022-2023</td>
                                         <td>IEEE FNWF 2023</td>
@@ -270,5 +328,4 @@
     <script type="text/javascript" src="assets/js/main.js"></script>            
 </body>
 
-
-<!DOCTYPE html>
+</html>
